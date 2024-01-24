@@ -19,7 +19,9 @@ function Login() {
           <Input label="Email address" type="email" name="email"/>
           <Input label="Password" type="password" name="password"/>
           <LargeButton text="ENTRAR" />
-          <Subtitle1 text="Cadastre-se" />
+          <a href="">
+            <Subtitle1 text="Cadastre-se" />
+          </a>
         </div>
       </div>
       
