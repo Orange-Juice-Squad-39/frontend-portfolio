@@ -1,0 +1,13 @@
+.login {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-neutral-60, #FCFDFF);
+}
+
+.login-right-components {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

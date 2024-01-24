@@ -1,9 +1,17 @@
-import Button from "@/components/Button";
+import img_login from "../assets/images/img_login.png";
+import TitleH3 from "@/components/TitleH3";
+import Button from "@/components/LargeButton";
+import "../styles/login.css";
 
 function Login() {
   return (
-    <div>
-        <Button text="ENTRAR"/>
+    <div className="login">
+      <img src={img_login.src}/>
+      <div className="login-right-components">
+        <TitleH3 text="Entre no Orange Portfólio" />
+        <Button text="ENTRAR" />
+      </div>
+      
     </div>
   )
 }
