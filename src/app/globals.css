@@ -39,6 +39,49 @@
 --color-neutral-110: #515255 ;
 --color-neutral-120: #303133;
 --color-neutral-130: #0B0C0D; 
+
+
+/* **** SUPPORT COLORS **** */
+
+/* SUCESS COLOR PALETTE */
+--color-sucess-60: #EEFFBB;
+--color-sucess-70: #BBEE88;
+--color-sucess-80: #88CC66;
+--color-sucess-90: #55BB44;
+--color-sucess-100: #229922;
+--color-sucess-110: #118822;
+--color-sucess-120: #006622;
+--color-sucess-130: #004422;
+ 
+/* ALERT COLOR PALETTE */
+--color-alert-60: #FFFFCC;
+--color-alert-70: #FFEE99; 
+--color-alert-80: #FFEE66; 
+--color-alert-90: #FFDD33;
+--color-alert-100: #FFCC00;
+--color-alert-110: #CC9900;
+--color-alert-120: #997700;   
+--color-alert-130: #664400;    
+
+/* ERROR COLOR PALETTE */
+--color-error-60: #FFDDCC;
+--color-error-70: #FFAA99;
+--color-error-80: #FF7766;
+--color-error-90: #FF4433;
+--color-error-100: #DD0000;
+--color-error-110: #BB0000;
+--color-error-120: #880000;
+--color-error-130: #660000;
+
+/* INFO COLOR PALETTE */
+--color-info-60: #ADCBFA;
+--color-info-70: #82A9F0;
+--color-info-80: #608AE1;
+--color-info-90: #315FCE;
+--color-info-100: #2348B1;
+--color-info-110: #183594;
+--color-info-120: #0F2477;
+--color-info-130: #091862;
 }
 
 @media (prefers-color-scheme: dark) {
