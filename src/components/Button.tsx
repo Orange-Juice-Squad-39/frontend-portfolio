@@ -1,10 +1,10 @@
 import "../styles/button.css";
 
-interface buttonStyle {
+interface buttonProps {
     text: string;
 }
 
-function Button({ text }: buttonStyle) {
+function Button({ text }: buttonProps) {
   return (
     <button className="button buttonText">{text}</button>
   )
