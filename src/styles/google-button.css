@@ -1,0 +1,20 @@
+.google-button {
+    display: flex;
+    padding: 11px var(--1, 8px);
+    align-items: flex-start;
+    gap: var(--3, 24px);
+    border-radius: 2px;
+    background: #FFF;
+    /* googleshadow1 */
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.17), 0px 0px 1px 0px rgba(0, 0, 0, 0.08);
+    margin: 32px;
+}
+
+.google-button-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
