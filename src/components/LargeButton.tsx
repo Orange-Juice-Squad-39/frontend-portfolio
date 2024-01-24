@@ -6,7 +6,7 @@ interface largeButtonProps {
 
 function LargeButton({ text }: largeButtonProps) {
   return (
-    <button className="large-button large-button-text">{text}</button>
+    <button type="submit" className="large-button large-button-text">{text}</button>
   )
 }
 
