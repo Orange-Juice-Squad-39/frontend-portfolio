@@ -8,20 +8,28 @@ interface inputProps {
     label: string;
     type: string;
     name: string;
+    placeholder: string;
 }
 
-function Input({ label, type, name }: inputProps) {
+function Input({ label, type, name, placeholder }: inputProps) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
 
   return (
     <div className="input-container">
-        <div className="label-container">
-          <label className="label-text">{label}</label>
-        </div>
+        {label !== "" && (
+          <div className="label-container">
+            <label className="label-text">{label}</label>
+          </div>
+        )}
 
         <div className="input-content">
-          <input type={inputType} name={name} className="input-content input-text"/>
+          <input 
+            type={inputType} 
+            name={name} 
+            placeholder={placeholder}
+            className="input-content input-text"
+          />
 
           {type === "password" && (
             <button

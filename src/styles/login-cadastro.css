@@ -1,13 +1,23 @@
-.login {
+.login-cadastro {
     display: flex;
     flex-direction: row;
     background-color: #fff;
 }
 
-.login-right-components {
+.right-components {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row;
+    width: 517px;
+}
+
+.surname {
+    margin-left: 16px;
 }
