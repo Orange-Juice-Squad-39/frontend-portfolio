@@ -12,7 +12,7 @@ function Cadastro() {
         <img src={img_cadastro.src}/>
       </div>
       <div className="right-components">
-        {/* <RegistrationAlert text="Cadastro feito com sucesso"/> */}
+        <RegistrationAlert text="Cadastro feito com sucesso"/>
         <TitleH3 text="Cadastre-se" />
         <div>
           <div className="name-container">
