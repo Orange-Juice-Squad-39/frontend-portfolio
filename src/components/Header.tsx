@@ -16,7 +16,7 @@ function Header() {
             </a>
         </div>
 
-        <div className="header-empty-div"></div>
+        {/* <div className="header-empty-div"></div> */}
         
         <div className="header-right-container">
             <a href="">
