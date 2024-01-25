@@ -19,9 +19,9 @@ function Portfolio() {
           </div>
         </div>
         <div className="portfolio-projects">
-          <ProjectArea/>
-          <ProjectArea/>
-          <ProjectArea/>
+          <ProjectArea emptyProj={true}/>
+          <ProjectArea emptyProj={false}/>
+          <ProjectArea emptyProj={false}/>
         </div>
       </div>
     </div>

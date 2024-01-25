@@ -1,8 +1,18 @@
 .project-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 390px;
     height: 258px;
     flex-shrink: 0;
     border-radius: var(--borderRadius, 4px);
     margin-right: 24px;
+}
+
+.empty-bg {
+    background: var(--Neutral-Colors-Neutral-70, #E6E9F2);
+}
+
+.non-empty-bg {
     background: rgba(230, 233, 242, 0.20);
 }

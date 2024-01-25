@@ -2,11 +2,12 @@ import "../styles/medium-small-button.css";
 
 interface mediumButtonProps {
     text: string;
+    disabled: boolean;
 }
 
-function MediumSmallButton({ text }: mediumButtonProps) {
+function MediumSmallButton({ text, disabled }: mediumButtonProps) {
   return (
-    <button className="medium-button medium-button-text">{text}</button>
+    <button disabled={disabled} className="medium-button medium-button-text">{text}</button>
   )
 }
 

@@ -16,7 +16,7 @@ function CardPerfil() {
                     <h5 className="card-h5">{userName}</h5>
                     <text className="subtitle1 card-country">{country}</text>
                 </div>
-                <MediumSmallButton text="ADICIONAR PROJETO"/>
+                <MediumSmallButton disabled={true} text="ADICIONAR PROJETO"/>
             </div>
         </div>
     )
