@@ -5,19 +5,21 @@ import TitleH5 from "@/components/TitleH5";
 import Input from "@/components/Input";
 import LargeButton from "@/components/LargeButton";
 import Subtitle1 from "@/components/Subtitle1";
-import "../styles/login.css";
+import "../styles/login-cadastro.css";
 
 function Login() {
   return (
-    <div className="login">
-      <img src={img_login.src}/>
-      <div className="login-right-components">
+    <div className="login-cadastro">
+      <div className="left-components">
+        <img src={img_login.src}/>
+      </div>
+      <div className="right-components">
         <TitleH3 text="Entre no Orange Portfólio" />
         <GoogleButton/>
         <div>
           <TitleH5 text="Faça login com email" />
-          <Input label="Email address" type="email" name="email"/>
-          <Input label="Password" type="password" name="password"/>
+          <Input label="Email address" type="email" name="email" placeholder=""/>
+          <Input label="Password" type="password" name="password" placeholder=""/>
           <LargeButton text="ENTRAR" />
           <a href="">
             <Subtitle1 text="Cadastre-se" />
