@@ -7,10 +7,7 @@
     background: #FFF;
     /* googleshadow1 */
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.17), 0px 0px 1px 0px rgba(0, 0, 0, 0.08);
-<<<<<<< Updated upstream
     margin-bottom: 32px;
-=======
-    margin: 32px;
     border: none;
 
     transition: all 200ms linear;
@@ -36,7 +33,6 @@
 .google-button:focus {
     border-radius: var(--none, 0px);
     background: linear-gradient(0deg, rgba(66, 133, 244, 0.30) 0%, rgba(66, 133, 244, 0.30) 100%), #FFF;
->>>>>>> Stashed changes
 }
 
 .google-button-text {

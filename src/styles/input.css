@@ -62,3 +62,8 @@
     height: var(--3, 24px);
     flex-shrink: 0;
 }
+
+.password-toggle {
+    background: none;
+    border: none;
+}

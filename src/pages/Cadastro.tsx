@@ -8,16 +8,18 @@ import "../styles/login-cadastro.css";
 function Cadastro() {
   return (
     <div className="login-cadastro">
-      <img src={img_cadastro.src}/>
+      <div className="left-components">
+        <img src={img_cadastro.src}/>
+      </div>
       <div className="right-components">
         {/* <RegistrationAlert text="Cadastro feito com sucesso"/> */}
         <TitleH3 text="Cadastre-se" />
         <div>
           <div className="name-container">
             <Input label="Nome *" type="text" name="name" placeholder=""/>
-            <div className="surname">
+            {/* <div className="surname"> */}
               <Input label="" type="text" name="surname" placeholder="Sobrenome *"/>
-            </div>
+            {/* </div> */}
           </div>
           <Input label="Email address" type="email" name="email" placeholder=""/>
           <Input label="Password" type="password" name="password" placeholder=""/>

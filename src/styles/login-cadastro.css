@@ -24,10 +24,11 @@
 .name-container {
     display: flex;
     flex-direction: row;
-    width: 517px;
+    justify-content: space-around;
+    width: auto;
 }
 
 .surname {
-    margin-left: 16px;
+    /* margin-left: 16px; */
     /* height: 100vh; */
 }
