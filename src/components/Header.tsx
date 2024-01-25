@@ -19,12 +19,12 @@ function Header() {
         <div className="header-empty-div"></div>
         
         <div className="header-right-container">
-            <a href="">
+            <button className="header-button">
                 <img src={perfilImg.src} className="header-perfil-img"/>
-            </a>
-            <a href="">
+            </button>
+            <button className="header-button">
                 <img src={notificationIcon.src} className="header-notification-icon"/>
-            </a>
+            </button>
         </div>
     </div>
   )

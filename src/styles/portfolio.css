@@ -9,6 +9,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    height: 30vh;
+    margin-top: 7vh;
     /* background-color: aqua; */
+}
+
+.portfolio-bottom {
+    margin: 0 30px;
+    justify-content: space-between;
+}
+
+.portfolio-h6 {
+    color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
+    opacity: 0.6;
+}
+
+.portfolio-input {
+    width: 513px;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.portfolio-projects {
+    margin-top: 32px;
+    display: inline-flex;
 }
