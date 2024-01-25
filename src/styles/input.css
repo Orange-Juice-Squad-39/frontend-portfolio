@@ -54,3 +54,9 @@
     line-height: 16px; /* 133.333% */
     letter-spacing: 0.4px;
 }
+
+.eye-button {
+    width: var(--3, 24px);
+    height: var(--3, 24px);
+    flex-shrink: 0;
+}
