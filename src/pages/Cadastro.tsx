@@ -1,4 +1,5 @@
 import img_cadastro from "../assets/images/img_cadastro.png";
+import RegistrationAlert from "@/components/RegistrationAlert";
 import TitleH3 from "@/components/TitleH3";
 import Input from "@/components/Input";
 import LargeButton from "@/components/LargeButton";
@@ -9,6 +10,7 @@ function Cadastro() {
     <div className="login-cadastro">
       <img src={img_cadastro.src}/>
       <div className="right-components">
+        {/* <RegistrationAlert text="Cadastro feito com sucesso"/> */}
         <TitleH3 text="Cadastre-se" />
         <div>
           <div className="name-container">

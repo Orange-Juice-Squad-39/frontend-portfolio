@@ -9,17 +9,11 @@ import "../styles/login-cadastro.css";
 
 function Login() {
   return (
-<<<<<<< Updated upstream
     <div className="login-cadastro">
-      <img src={img_login.src}/>
-      <div className="right-components">
-=======
-    <div className="login">
-      <div className="login-left-components">
-      <img src={img_login.src}/>
+      <div className="left-components">
+        <img src={img_login.src}/>
       </div>
-      <div className="login-right-components">
->>>>>>> Stashed changes
+      <div className="right-components">
         <TitleH3 text="Entre no Orange Portfólio" />
         <GoogleButton/>
         <div>

@@ -5,11 +5,11 @@
     overflow-y: hidden;
 }
 
-.login-left-components{
+.left-components{
     height: 100vh;
 }
 
-.login-left-components img{
+.left-components img{
     height: 100%;
 }
 
@@ -19,7 +19,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-<<<<<<< Updated upstream:src/styles/login-cadastro.css
 }
 
 .name-container {
@@ -30,7 +29,5 @@
 
 .surname {
     margin-left: 16px;
-=======
-    height: 100vh;
->>>>>>> Stashed changes:src/styles/login.css
+    /* height: 100vh; */
 }

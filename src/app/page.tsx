@@ -5,8 +5,8 @@ import Cadastro from "@/pages/Cadastro";
 export default function Home() {
   return (
     <main>
-      <Login/>
-      {/* <Cadastro/> */}
+      {/* <Login/> */}
+      <Cadastro/>
     </main>
   );
 }

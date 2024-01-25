@@ -1,0 +1,21 @@
+.registration-alert {
+    display: flex;
+    width: 320px;
+    padding: 6px 16px;
+    align-items: flex-start;
+    border-radius: var(--borderRadius, 4px);
+    background: var(--success-main, #2E7D32);
+}
+
+.registration-text {
+    color: var(--success-contrast, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* alert/title */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.15px;
+}
