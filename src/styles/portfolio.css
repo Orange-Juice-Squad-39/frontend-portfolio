@@ -1,6 +1,14 @@
 .portfolio-container {
-    display: flex;
     background-color: #fff;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.portfolio-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    /* background-color: aqua; */
 }

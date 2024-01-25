@@ -15,10 +15,16 @@ function Header() {
                 <h6>Descobrir</h6>
             </a>
         </div>
+
         <div className="header-empty-div"></div>
+        
         <div className="header-right-container">
-            <img src={perfilImg.src} className="header-perfil-img"/>
-            <img src={notificationIcon.src} className="header-notification-icon"/>
+            <a href="">
+                <img src={perfilImg.src} className="header-perfil-img"/>
+            </a>
+            <a href="">
+                <img src={notificationIcon.src} className="header-notification-icon"/>
+            </a>
         </div>
     </div>
   )
