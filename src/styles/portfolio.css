@@ -1,0 +1,6 @@
+.portfolio-container {
+    display: flex;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
