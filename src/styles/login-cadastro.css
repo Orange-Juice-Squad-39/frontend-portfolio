@@ -1,7 +1,16 @@
 .login-cadastro {
     display: flex;
-    flex-direction: row;
     background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.login-left-components{
+    height: 100vh;
+}
+
+.login-left-components img{
+    height: 100%;
 }
 
 .right-components {
@@ -10,6 +19,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+<<<<<<< Updated upstream:src/styles/login-cadastro.css
 }
 
 .name-container {
@@ -20,4 +30,7 @@
 
 .surname {
     margin-left: 16px;
+=======
+    height: 100vh;
+>>>>>>> Stashed changes:src/styles/login.css
 }
