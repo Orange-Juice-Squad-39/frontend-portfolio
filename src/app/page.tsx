@@ -3,7 +3,7 @@ import Login from "../pages/Login";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <Login/>
     </main>
   );
