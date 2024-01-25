@@ -33,6 +33,15 @@
 
 }
 
+.header-button {
+    background: none;
+    border: none;
+}
+
+.header-button:hover {
+    opacity: 70%;
+}
+
 .header-perfil-img {
     display: flex;
     width: 40px;

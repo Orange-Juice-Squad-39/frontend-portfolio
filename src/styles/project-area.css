@@ -1,0 +1,8 @@
+.project-area-container {
+    width: 390px;
+    height: 258px;
+    flex-shrink: 0;
+    border-radius: var(--borderRadius, 4px);
+    margin-right: 24px;
+    background: rgba(230, 233, 242, 0.20);
+}
