@@ -43,12 +43,11 @@ function AddProject() {
                     placeholder="Link"
                     className="add-inputs label"
                 />
-                <input 
-                    type="text" 
+                <textarea 
                     name="description" 
                     placeholder="Descrição"
                     className="description-input label"
-                />
+                ></textarea>
             </div>
         </div>
         <div className="add-project-bottom-container">

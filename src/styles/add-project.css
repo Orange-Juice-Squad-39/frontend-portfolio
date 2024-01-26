@@ -117,7 +117,7 @@
 
     display: flex;
     height: 120px;
-    padding: var(--none, 0px) 12px;
+    padding: 12px;
     border-radius: var(--borderRadius, 4px);
     border: var(--none, 1px) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
     background: none;
