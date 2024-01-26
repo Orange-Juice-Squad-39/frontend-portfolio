@@ -3,6 +3,7 @@ import Login from "../pages/Login";
 import Cadastro from "@/pages/Cadastro";
 import Portfolio from "@/pages/Portfolio";
 import AddProject from "@/components/AddProject";
+import ViewPost from "@/components/ViewPost";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       {/* <Login/> */}
       {/* <Cadastro/> */}
       {/* <Portfolio/> */}
-      <AddProject/>
+      {/* <AddProject/> */}
+      <ViewPost/>
     </main>
   );
 }
