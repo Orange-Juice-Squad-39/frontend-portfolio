@@ -48,4 +48,5 @@
 
 .medium-button-text:disabled {
     color: var(--action-disabled, rgba(0, 0, 0, 0.38));
+    box-shadow: none;
 }
