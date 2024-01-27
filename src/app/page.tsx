@@ -12,9 +12,9 @@ export default function Home() {
       {/* <Login/> */}
       {/* <Cadastro/> */}
       {/* <Portfolio/> */}
-      {/* <AddProject/> */}
+      <AddProject/>
       {/* <ViewPost/> */}
-      <SucessModal text="Projeto adicionado com sucesso!"/>
+      {/* <SucessModal text="Projeto adicionado com sucesso!"/> */}
     </main>
   );
 }
