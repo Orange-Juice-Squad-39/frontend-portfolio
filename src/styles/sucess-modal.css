@@ -1,0 +1,96 @@
+.sucess-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sucess-container {
+    display: inline-flex;
+    padding: var(--2, 32px) var(--2, 48px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--none, 0px);
+    border-radius: var(--none, 0px);
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+}
+
+.sucess-content {
+    display: flex;
+    padding: var(--none, 0px);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--3, 24px);
+}
+
+.sucess-h5 {
+    display: flex;
+    width: 255px;
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+    text-align: center;
+}
+
+.img-container {
+    display: flex;
+    width: 255px;
+    height: var(--5, 40px);
+    padding: var(--none, 0px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--2, 0px);
+}
+
+.sucess-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--color-sucess-110, #118822);
+    border-radius: 50%;
+}
+
+.sucess-button {
+    display: flex;
+    width: 254px;
+    padding: 8px 22px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius, 4px);
+    background: var(--Color-Brand-Secundria-Secondary-100, #F52);
+    border: none;
+
+    /* elevation/2 */
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    color: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* [Orange P] Style Guide/Button */
+    font-style: normal;
+    line-height: 26px; /* 173.333% */
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+}
+
+.sucess-button:hover {
+    border-radius: var(--borderRadius, 4px);
+    background: var(--Color-Brand-Secundria-Secondary-110, #C40);
+
+    /* elevation/4 */
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.20), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.sucess-button:disabled {
+    border-radius: var(--borderRadius, 4px);
+    background: var(--action-disabledBackground, rgba(0, 0, 0, 0.12));
+    color: var(--action-disabled, rgba(0, 0, 0, 0.38));
+    box-shadow: none;
+}
+
+.sucess-button:focus {
+    border-radius: var(--borderRadius, 4px);
+    background: var(--Color-Brand-Secundria-Secondary-100, #F52);
+
+    /* elevation/6 */
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.20), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
