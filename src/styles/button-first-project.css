@@ -1,0 +1,25 @@
+.first-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 122px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.empty-img {
+    width: 100%;
+    max-width: 46px;
+    flex-shrink: 0;
+}
+
+.first-project-text {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+    opacity: 0.6;
+}
