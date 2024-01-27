@@ -5,6 +5,7 @@ import Portfolio from "@/pages/Portfolio";
 import AddProject from "@/components/modals/AddProject";
 import ViewPost from "@/components/modals/ViewPost";
 import SucessModal from "@/components/modals/SucessModal";
+import DeleteProject from "@/components/modals/DeleteProject";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       {/* <Login/> */}
       {/* <Cadastro/> */}
       {/* <Portfolio/> */}
-      <AddProject/>
+      {/* <AddProject/> */}
       {/* <ViewPost/> */}
       {/* <SucessModal text="Projeto adicionado com sucesso!"/> */}
+      <DeleteProject/>
     </main>
   );
 }

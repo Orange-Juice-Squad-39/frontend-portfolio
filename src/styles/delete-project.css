@@ -1,0 +1,36 @@
+.delete-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.delete-project-container {
+    display: flex;
+    width: 421px;
+    padding: var(--5, 40px) 42px;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: var(--4, 32px) var(--2, 16px);
+    flex-wrap: wrap;
+    border-radius: var(--none, 0px);
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+}
+
+.delete-project-h5 {
+    width: 255px;
+    flex-shrink: 0;
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+}
+
+.delete-project-text {
+    width: 337px;
+    flex-shrink: 0;
+    color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
+}
+
+.delete-project-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--2, 16px);
+}
