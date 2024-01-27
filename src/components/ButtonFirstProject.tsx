@@ -5,7 +5,7 @@ function ButtonFirstProject() {
   return (
     <button className="first-project-container">
         <img src={emptyImg.src} className="empty-img"/>
-        <div className="first-project-text">
+        <div className="first-project-text"> 
             <text className="body1">Adicione seu primeiro projeto</text>
         </div>
         <div className="first-project-text">

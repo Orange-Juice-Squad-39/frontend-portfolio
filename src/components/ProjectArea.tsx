@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ButtonFirstProject from "./ButtonFirstProject";
 import "../styles/project-area.css";
-
+ 
 interface projAreaProps {
     emptyProj: boolean;
 }
