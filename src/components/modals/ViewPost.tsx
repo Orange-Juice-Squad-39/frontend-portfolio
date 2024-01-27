@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react";
-import close from "../assets/images/close.svg";
-import userImg from "../assets/images/perfil-image.png";
-import Tag from "./Tag";
-import "../styles/view-post.css";
+import close from "../../assets/images/close.svg";
+import userImg from "../../assets/images/perfil-image.png";
+import Tag from "../Tag";
+import "../../styles/view-post.css";
 
 function ViewPost() {
   const [avatar, setAvatar] = useState(userImg);

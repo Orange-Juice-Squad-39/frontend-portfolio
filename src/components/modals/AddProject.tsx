@@ -1,6 +1,6 @@
-import emptyImg from "../assets/images/collections.svg";
-import MediumSmallButton from "./MediumSmallButton";
-import "../styles/add-project.css";
+import emptyImg from "../../assets/images/collections.svg";
+import MediumSmallButton from "../MediumSmallButton";
+import "../../styles/add-project.css";
 
 function AddProject() {
   return (
