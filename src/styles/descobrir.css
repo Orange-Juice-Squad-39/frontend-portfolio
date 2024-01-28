@@ -1,0 +1,56 @@
+.descobrir-container {
+    background-color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.descobrir-bottom {
+    height: 100vh;
+    margin: 0 30px;
+    justify-content: space-between;
+    display: grid;
+    gap: 10px;
+	grid-template-areas: 
+		"A A A"
+		"B . ."
+		"C . ."
+	;
+    grid-auto-rows: 25%;
+    /* background-color: red; */
+}
+
+
+.descobrir-h4 {
+    grid-area: A;
+    text-align: center;
+    color: var(--color-principal-90);
+    align-self: flex-end;
+}
+
+
+.descobrir-h6 {
+    color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
+    opacity: 0.6;
+}
+
+.descobrir-input {
+    width: 513px;
+    flex-direction: column;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.descobrir-search{
+    grid-area: B;
+    height: 33vh;
+    /* background-color: blue; */
+}
+
+.descobrir-projects {
+    grid-area: C;
+    height: 33vh;
+    /* margin-top: 32px; */
+    display: inline-flex;
+    /* background-color: red; */
+}

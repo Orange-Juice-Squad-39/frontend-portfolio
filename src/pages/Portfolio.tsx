@@ -5,6 +5,7 @@ import ProjectArea from "@/components/ProjectArea";
 import "../styles/portfolio.css";
 
 function Portfolio() {
+
   return (
     <div className="portfolio-container">
       <Header/>
@@ -25,6 +26,13 @@ function Portfolio() {
             <ProjectArea emptyProj={false}/>
             <ProjectArea emptyProj={false}/>
           </div>
+
+
+
+
+
+
+          
         </div>
 
     </div>
