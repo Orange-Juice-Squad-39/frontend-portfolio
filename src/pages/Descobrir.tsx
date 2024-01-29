@@ -3,6 +3,14 @@ import CardPerfil from "@/components/CardPerfil";
 import Input from "@/components/Input";
 import ProjectArea from "@/components/ProjectArea";
 import "../styles/descobrir.css";
+import modelo1 from "../assets/images/modelo1.png";
+import modelo2 from "../assets/images/modelo2.png";
+import modelo3 from "../assets/images/modelo3.png";
+import modelo4 from "../assets/images/modelo4.png";
+import perfil1 from "../assets/images/perfil-modelo1.png";
+import perfil2 from "../assets/images/perfil-modelo2.png";
+import perfil3 from "../assets/images/perfil-modelo3.png";
+import perfil4 from "../assets/images/perfil-modelo4.png";
 
 function Descobrir() {
 
@@ -20,9 +28,45 @@ function Descobrir() {
             </div>
           </div>
           <div className="descobrir-projects">
-            <ProjectArea emptyProj={true}/>
-            <ProjectArea emptyProj={false}/>
-            <ProjectArea emptyProj={false}/>
+          <div className="modelo">
+            <div className="modelo-img">
+            <img src={modelo1.src}/>
+            </div>
+            <div className="modelo-info">
+              <img src={perfil1.src}/>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+
+          <div className="modelo">
+            <div className="modelo-img">
+            <img src={modelo2.src}/>
+            </div>
+            <div className="modelo-info">
+              <img src={perfil2.src}/>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+
+          <div className="modelo">
+            <div className="modelo-img">
+            <img src={modelo3.src}/>
+            </div>
+            <div className="modelo-info">
+              <img src={perfil3.src}/>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+
+          <div className="modelo">
+            <div className="modelo-img">
+            <img src={modelo4.src}/>
+            </div>
+            <div className="modelo-info">
+              <img src={perfil4.src}/>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
           </div>
 
 

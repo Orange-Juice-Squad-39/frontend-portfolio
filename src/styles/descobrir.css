@@ -1,3 +1,7 @@
+p{
+    color: var(--color-neutral-110);
+}
+
 .descobrir-container {
     background-color: #fff;
     height: 100vh;
@@ -13,7 +17,7 @@
 	grid-template-areas: 
 		"A A A"
 		"B . ."
-		"C . ."
+		"C C C"
 	;
     grid-auto-rows: 25%;
     /* background-color: red; */
@@ -49,8 +53,32 @@
 
 .descobrir-projects {
     grid-area: C;
-    height: 33vh;
-    /* margin-top: 32px; */
+    width: calc(100vw - 90px);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.modelo-img{
+    height: 85%;
+}
+
+
+.modelo img{
+    width: 100%;
+    height: 100%;
+}
+
+.modelo-info{
+    margin-top: 12px;
     display: inline-flex;
-    /* background-color: red; */
+    align-items: center;
+    gap: 8px;
+}
+
+.modelo-info img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
