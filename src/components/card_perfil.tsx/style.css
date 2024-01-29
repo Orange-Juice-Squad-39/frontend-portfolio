@@ -1,0 +1,42 @@
+.card-perfil-container {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 2.625rem;
+}
+
+.card-perfil-img {
+    display: flex;
+    width: 122px;
+    height: 122px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.card-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--3, 1.5rem);
+}
+
+.card-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--2, 1rem);
+}
+
+.card-h5 {
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+    font-style: normal;
+    line-height: 1.5rem;
+}
+
+.card-country {
+    color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
+    font-style: normal;
+    line-height: 1rem; /* 100% */
+    letter-spacing: 0.0094rem;
+    opacity: 0.5;
+}

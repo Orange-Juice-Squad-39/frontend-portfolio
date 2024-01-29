@@ -1,0 +1,44 @@
+.cadastro-container {
+    display: flex;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-components{
+    height: 100vh;
+}
+
+.left-components img{
+    height: 100%;
+}
+
+.right-components {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h3 {
+    color: var(--Color-Brand-Primria-Primary-90, var(--Color-Brand-Primria-Primary-90, #224));
+    text-align: center;
+    font-style: normal;
+    line-height: 2.5rem; /* 83.333% */
+    margin-bottom: 2rem;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name-input {
+    width: calc(50% - 0.5rem);
+}
+
+.surname-input {
+    width: calc(50% - 0.5rem);
+}

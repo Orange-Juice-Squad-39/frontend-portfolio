@@ -1,0 +1,60 @@
+.portfolio-container {
+    background-color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.portfolio-content {
+    height: 100vh;
+    margin: 0 30px;
+    justify-content: space-between;
+    display: grid;
+    gap: 10px;
+	grid-template-areas: 
+		"A A A A A"
+		"B . . . ."
+		"C . . . ."
+	;
+    grid-auto-rows: 25%;
+    /* background-color: red; */
+}
+
+.portfolio-card {
+    grid-area: A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33vh;
+    /* margin-top: 7vh; */
+    /* background-color: aqua; */
+}
+
+
+.portfolio-h6 {
+    color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
+    font-style: normal;
+    line-height: 1.25rem; /* 100% */
+    letter-spacing: 0.0094rem;
+    opacity: 0.6;
+}
+
+.portfolio-input {
+    width: 513px;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.portfolio-search{
+    grid-area: B;
+    height: 33vh;
+    /* background-color: blue; */
+}
+
+.portfolio-projects {
+    grid-area: C;
+    height: 33vh;
+    /* margin-top: 32px; */
+    display: inline-flex;
+    /* background-color: red; */
+}

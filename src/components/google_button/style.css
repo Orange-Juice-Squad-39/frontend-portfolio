@@ -1,0 +1,45 @@
+.google-button {
+    display: flex;
+    padding: 0.6875rem var(--1, 0.5rem);
+    align-items: flex-start;
+    gap: var(--3, 1.5rem);
+    border-radius: 0.125rem;
+    background: #FFF;
+    /* googleshadow1 */
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.17), 0px 0px 1px 0px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    border: none;
+
+    transition: all 200ms linear;
+    border: none;
+    cursor: pointer;
+}
+
+.google-button:hover {
+    border-radius: 0.125rem;
+    background: rgba(66, 133, 244, 0.10);
+}
+
+.google-button:active {
+    border-radius: 2px;
+    background: #EEE;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.17), 0px 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+
+.google-button:disabled {
+    border-radius: var(--none, 0px);
+}
+
+.google-button:focus {
+    border-radius: var(--none, 0px);
+    background: linear-gradient(0deg, rgba(66, 133, 244, 0.30) 0%, rgba(66, 133, 244, 0.30) 100%), #FFF;
+}
+
+.google-button-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-family: Roboto;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -1,0 +1,52 @@
+.large-button {
+    display: flex;
+    width: 517px;
+    height: 42px;
+    padding: 0.5rem 1.375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--borderRadius, 0.25rem);
+    background: var(--Color-Brand-Secundria-Secondary-100, #F52);
+
+    /* elevation/2 */
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    transition: all 200ms linear;
+    border: none;
+    cursor: pointer;
+}
+
+.large-button:hover {
+    border-radius: var(--borderRadius, 0.25rem);
+    background: var(--Color-Brand-Secundria-Secondary-110, #C40);
+
+    /* elevation/4 */
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.20), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.large-button:disabled {
+    border-radius: var(--borderRadius, 0.25rem);
+    background: var(--action-disabledBackground, rgba(0, 0, 0, 0.12));
+}
+
+.large-button:focus {
+    border-radius: var(--borderRadius, 0.25rem);
+    background: var(--Color-Brand-Secundria-Secondary-100, #F52);
+
+    /* elevation/6 */
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.20), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+button {
+    color: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    font-feature-settings: 'clig'off, 'liga'off;
+    font-style: normal;
+    line-height: 26px;
+    /* 173.333% */
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+}

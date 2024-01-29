@@ -1,0 +1,27 @@
+.registration-alert {
+    display: flex;
+    width: 320px;
+    padding: 0.75rem 1rem;
+    align-items: flex-start;
+    border-radius: var(--borderRadius, 0.25rem);
+    background: var(--success-main, #2E7D32);
+    position: absolute;
+    top: 4.8125rem;
+}
+
+.registration-text {
+    color: var(--success-contrast, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* alert/title */
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.0094rem;
+}
+
+.registration-text > img {
+    padding-right: 0.75rem;
+}
