@@ -16,11 +16,14 @@ function Login() {
       <div className="right-components">
         <h3 className="login-h3">Entre no Orange Portfólio</h3>
         <GoogleButton/>
-        <div>
+        <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
           <Input label="Email address" type="email" name="email" placeholder=""/>
           <Input label="Password" type="password" name="password" placeholder=""/>
-          <LargeButton text="ENTRAR" />
+          <div className="login-submit">
+            <LargeButton text="ENTRAR"/>
+          </div>
+          
           <div className="link-container">
             <a href="/cadastro" className="subtitle1">Cadastre-se</a>
           </div>
