@@ -1,5 +1,5 @@
-import MediumSmallButton from "../MediumSmallButton";
-import "../../styles/delete-project.css";
+import MediumSmallButton from "@/components/MediumSmallButton";
+import "./style.css";
 
 function DeleteProject() {
   return (

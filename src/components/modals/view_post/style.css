@@ -68,13 +68,17 @@
     margin: auto 0;
 }
 
-.post-img {
+.post-img-container {
     width: 838px;
     height: 585px;
     flex-shrink: 0;
-    border-radius: var(--none, 0px);
-    background: url("../assets/images/Image.png"), lightgray 50% / cover no-repeat;
+    background: url(), lightgray 50% / cover no-repeat;
     margin: 32px auto 64px;
+}
+
+.post-img {
+    width: 838px;
+    height: 585px;
 }
 
 .post-description {

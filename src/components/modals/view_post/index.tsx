@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
-import close from "../../assets/images/close.svg";
-import userImg from "../../assets/images/perfil-image.png";
-import Tag from "../Tag";
-import "../../styles/view-post.css";
+import close from "@/assets/images/close.svg";
+import userImg from "@/assets/images/perfil-image.png";
+import Tag from "@/components/Tag";
+import postImg from "@/assets/images/Image.png";
+import "./style.css";
 
 function ViewPost() {
   const [avatar, setAvatar] = useState(userImg);
@@ -30,7 +31,9 @@ function ViewPost() {
           <Tag text="Web"/>
         </div>
       </div>
-      <div className="post-img"></div>
+      <div className="post-img-container">
+        <img src={postImg.src} className="post-img"/>
+      </div>
       <div className="post-description">
         <text className="description-text body1">
           Temos o prazer de compartilhar com vocês uma variação da nosso primeiro recurso gratuito, Monoceros. É um modelo de uma página para mostrar seus produtos. Tentamos redesenhar uma versão mais B2C e minimalista do nosso primeiro template de e-commerce.

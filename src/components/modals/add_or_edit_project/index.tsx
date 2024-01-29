@@ -1,12 +1,12 @@
-import emptyImg from "../../assets/images/collections.svg";
-import MediumSmallButton from "../MediumSmallButton";
-import "../../styles/add-project.css";
+import emptyImg from "@/assets/images/collections.svg";
+import MediumSmallButton from "@/components/MediumSmallButton";
+import "./style.css";
 
 interface addEditProps {
     adding: boolean;
 }
 
-function AddEditProject({ adding }: addEditProps) {
+function AddOrEditProject({ adding }: addEditProps) {
   return (
     <div className="add-project">
         <div className="add-project-container">
@@ -74,4 +74,4 @@ function AddEditProject({ adding }: addEditProps) {
   )
 }
 
-export default AddEditProject
+export default AddOrEditProject

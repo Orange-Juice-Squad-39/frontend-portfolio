@@ -1,4 +1,4 @@
-.menu-project-container {
+.menu-container {
     display: flex;
     padding: 16px 0px;
     flex-direction: column;
@@ -25,7 +25,7 @@
     stroke: #FCFDFF;
 }
 
-.menu-project-item {
+.menu-item {
     display: flex;
     width: 208px;
     padding: var(--1, 8px) var(--3, 24px);
@@ -36,6 +36,6 @@
     border: none;
 }
 
-.menu-project-item:hover {
+.menu-item:hover {
     background: var(--Color-Brand-Secundria-Secondary-60, #FEC);
 }

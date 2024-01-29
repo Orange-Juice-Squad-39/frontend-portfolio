@@ -23,11 +23,13 @@
     gap: var(--3, 24px);
 }
 
-.sucess-h5 {
+h5 {
     display: flex;
     width: 255px;
     color: var(--Neutral-Colors-Neutral-110, #515255);
     text-align: center;
+    font-style: normal;
+    line-height: 24px; /* 100% */
 }
 
 .img-container {

@@ -1,5 +1,6 @@
-import sucessImg from "../../assets/images/sucess.svg";
-import "../../styles/sucess-modal.css";
+import sucessImg from "@/assets/images/sucess.svg";
+// import "../../styles/sucess-modal.css";
+import "./style.css";
 
 interface sucessProps {
   text: string;
@@ -10,7 +11,7 @@ function SucessModal({ text }: sucessProps) {
     <div className="sucess-modal">
       <div className="sucess-container">
         <div className="sucess-content">
-          <h5 className="sucess-h5">{text}</h5>
+          <h5>{text} com sucesso!</h5>
           <div className="img-container">
             <img src={sucessImg.src} className="sucess-img"/>
           </div>
