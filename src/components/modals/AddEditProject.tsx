@@ -2,11 +2,22 @@ import emptyImg from "../../assets/images/collections.svg";
 import MediumSmallButton from "../MediumSmallButton";
 import "../../styles/add-project.css";
 
-function AddProject() {
+interface addEditProps {
+    adding: boolean;
+}
+
+function AddEditProject({ adding }: addEditProps) {
   return (
     <div className="add-project">
         <div className="add-project-container">
-            <h5 className="add-project-h5">Adicionar projeto</h5>
+            <h5 className="add-project-h5">
+                {adding && (
+                    <text>Adicionar projeto</text>
+                )}
+                {!adding && (
+                    <text>Editar projeto</text>
+                )}
+            </h5>
             <div className="add-project-content">
                 <div className="add-project-content-left">
                     <text className="subtitle1 content-left-text">
@@ -63,4 +74,4 @@ function AddProject() {
   )
 }
 
-export default AddProject
+export default AddEditProject

@@ -1,0 +1,41 @@
+.menu-project-container {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+
+    /* Modal */
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.30);
+}
+
+.arrow-img {
+    width: 25px;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 20px;
+    top: -16px;
+    stroke-width: 3px;
+    stroke: #FCFDFF;
+}
+
+.menu-project-item {
+    display: flex;
+    width: 208px;
+    padding: var(--1, 8px) var(--3, 24px);
+    align-items: flex-start;
+    gap: var(--1, 8px);
+    color: var(--Neutral-Colors-Neutral-110, var(--Neutral-Colors-Neutral-110, #515255));
+    background: none;
+    border: none;
+}
+
+.menu-project-item:hover {
+    background: var(--Color-Brand-Secundria-Secondary-60, #FEC);
+}
