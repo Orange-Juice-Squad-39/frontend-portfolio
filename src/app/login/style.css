@@ -5,11 +5,11 @@
     overflow-y: hidden;
 }
 
-.left-components{
+.left-components {
     height: 100vh;
 }
 
-.left-components img{
+.left-components img {
     height: 100%;
 }
 
@@ -25,14 +25,16 @@ h3 {
     color: var(--Color-Brand-Primria-Primary-90, var(--Color-Brand-Primria-Primary-90, #224));
     text-align: center;
     font-style: normal;
-    line-height: 2.5rem; /* 83.333% */
+    line-height: 2.5rem;
+    /* 83.333% */
     margin-bottom: 2rem;
 }
 
 h5 {
     color: var(--Neutral-Colors-Neutral-110, #515255);
     font-style: normal;
-    line-height: 1.5rem; /* 100% */
+    line-height: 1.5rem;
+    /* 100% */
     margin-bottom: 1.5rem;
 }
 
@@ -43,6 +45,86 @@ h5 {
 a {
     color: var(--Neutral-Colors-Neutral-100, #818388);
     font-style: normal;
-    line-height: 1rem; /* 100% */
+    line-height: 1rem;
+    /* 100% */
     letter-spacing: 0.0094rem;
+}
+
+@media (min-width: 560px) and (max-width: 1200px) {
+    .login-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* background-image: url('../../assets/images/img_login_mobile.png'); */
+        background-repeat: no-repeat;
+    }
+
+    .login-h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .left-components {
+        display: none;
+    }
+
+    .login-input{
+        width: 100vw;
+        padding: 0px 10vw;
+        /* background-color: red; */
+    }
+
+    .login-submit{
+        width: 100%;
+        background-color: red;
+    }
+
+    .login-submit button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px){
+    .login-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* background-image: url('../../assets/images/img_login_mobile.png'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .login-h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .left-components {
+        display: none;
+    }
+
+    .login-input{
+        width: 100vw;
+        padding: 0px 10vw;
+        /* background-color: red; */
+    }
+
+    .login-submit{
+        width: 100%;
+        background-color: red;
+    }
+
+    .login-submit button{
+        width: 100%;
+    }
 }
