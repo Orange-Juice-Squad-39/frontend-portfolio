@@ -2,7 +2,7 @@
 import { useState } from "react";
 import close from "@/assets/images/close.svg";
 import userImg from "@/assets/images/perfil-image.png";
-import Tag from "@/components/Tag";
+import Tag from "@/components/tag";
 import postImg from "@/assets/images/Image.png";
 import "./style.css";
 

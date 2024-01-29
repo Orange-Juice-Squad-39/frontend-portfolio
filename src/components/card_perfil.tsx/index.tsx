@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import perfilImg from "../assets/images/perfil-image.png";
-import MediumSmallButton from "./MediumSmallButton";
-import "../styles/card-perfil.css";
+import perfilImg from "@/assets/images/perfil-image.png";
+import SmallButton from "../small_button";
+import "./style.css";
 
 function CardPerfil() {
     const [userName, setUserName] = useState('Camila Soares');
@@ -16,7 +16,7 @@ function CardPerfil() {
                     <h5 className="card-h5">{userName}</h5>
                     <text className="subtitle1 card-country">{country}</text>
                 </div>
-                <MediumSmallButton disabled={true} text="ADICIONAR PROJETO"/>
+                <SmallButton disabled={true} text="ADICIONAR PROJETO"/>
             </div>
         </div>
     )

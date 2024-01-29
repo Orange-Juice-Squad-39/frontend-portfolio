@@ -31,7 +31,7 @@
 }
 
 
-h6 {
+.portfolio-h6 {
     color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
     font-style: normal;
     line-height: 1.25rem; /* 100% */

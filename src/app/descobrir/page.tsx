@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import Input from "@/components/Input";
+import Header from "@/components/header";
+import Input from "@/components/input";
 import modelo1 from "@/assets/images/modelo1.png"
 import modelo2 from "@/assets/images/modelo2.png";
 import modelo3 from "@/assets/images/modelo3.png";

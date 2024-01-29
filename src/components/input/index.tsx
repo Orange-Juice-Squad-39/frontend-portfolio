@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import "../styles/input.css";
-import eye from "../assets/images/eye.svg";
-import invisibleEye from "../assets/images/invisibleEye.svg";
+import eye from "@/assets/images/eye.svg";
+import invisibleEye from "@/assets/images/invisibleEye.svg";
+import "./style.css";
 
 interface inputProps {
     label: string;
@@ -19,7 +19,7 @@ function Input({ label, type, name, placeholder }: inputProps) {
     <div className="input-container">
         {label !== "" && (
           <div className="label-container">
-            <label className="label-text">{label}</label>
+            <label>{label}</label>
           </div>
         )}
 

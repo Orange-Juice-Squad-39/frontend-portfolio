@@ -1,5 +1,5 @@
-import emptyImg from "../assets/images/collections.svg";
-import "../styles/button-first-project.css";
+import emptyImg from "@/assets/images/collections.svg";
+import "./style.css";
 
 function ButtonFirstProject() {
   return (

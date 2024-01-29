@@ -5,8 +5,8 @@
     padding: 5% 10%;
     height: 100%;
     flex-shrink: 0;
-    border-radius: var(--borderRadius, 4px);
-    margin-right: 24px;
+    border-radius: var(--borderRadius, 0.25rem);
+    margin-right: 1.5rem;
     cursor: pointer;
 }
 

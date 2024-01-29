@@ -1,5 +1,5 @@
 import emptyImg from "@/assets/images/collections.svg";
-import MediumSmallButton from "@/components/MediumSmallButton";
+import SmallButton from "@/components/small_button";
 import "./style.css";
 
 interface addEditProps {
@@ -65,8 +65,8 @@ function AddOrEditProject({ adding }: addEditProps) {
             <div className="add-project-bottom-container">
                 <a href="" className="view-post-button subtitle1">Visualizar publicação</a>
                 <div className="bottom-buttons">
-                    <MediumSmallButton text="SALVAR" disabled={false}/>
-                    <MediumSmallButton text="CANCELAR" disabled={true}/>
+                    <SmallButton text="SALVAR" disabled={false}/>
+                    <SmallButton text="CANCELAR" disabled={true}/>
                 </div>
             </div>
         </div>

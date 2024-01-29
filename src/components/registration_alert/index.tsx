@@ -1,5 +1,5 @@
-import "../styles/registration-alert.css";
-import check from "../assets/images/CheckCircleOutlined.svg";
+import check from "@/assets/images/CheckCircleOutlined.svg";
+import "./style.css";
 
 interface registrationAlertProps {
     text: string;

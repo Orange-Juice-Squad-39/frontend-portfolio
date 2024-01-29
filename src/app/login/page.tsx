@@ -1,10 +1,7 @@
 import imgLogin from "@/assets/images/img_login.png";
-import TitleH3 from "@/components/TitleH3";
-import GoogleButton from "@/components/GoogleButton";
-import TitleH5 from "@/components/TitleH5";
-import Input from "@/components/Input";
-import LargeButton from "@/components/LargeButton";
-import Subtitle1 from "@/components/Subtitle1";
+import GoogleButton from "@/components/google_button";
+import Input from "@/components/input";
+import LargeButton from "@/components/large_button";
 import "./style.css";
 
 function Login() {

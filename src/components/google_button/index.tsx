@@ -1,5 +1,5 @@
-import logo_google from "../assets/images/logo-google.svg";
-import "../styles/google-button.css";
+import logo_google from "@/assets/images/logo-google.svg";
+import "./style.css";
 
 function GoogleButton() {
   return (

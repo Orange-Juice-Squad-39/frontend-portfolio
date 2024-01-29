@@ -3,32 +3,34 @@
     grid-template-columns: 1fr 3fr 1fr;
     width: 100%;
     height: 73px;
-    padding: 16px 30px;
-    border-bottom: 1px solid #113;
+    padding: 1rem 1.875rem;
+    border-bottom: 0.0625rem solid #113;
     background: #113;    
 }
 
 .header-logo {
     height: 41px;
-    border-radius: var(--none, 0px);
 }
 
 .header-h6-container {
     display: flex;
-    padding: var(--none, 0px);
     align-items: center;
-    gap: var(--3, 24px);
-    border-radius: var(--none, 0px);
+    gap: var(--3, 1.5rem);
+}
+
+h6 {
+    color: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    font-style: normal;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.15px;
 }
 
 .header-right-container {
     display: flex;
-
     height: 41px;
-    padding: var(--none, 0px);
     justify-content: flex-end;
     align-items: center;
-    gap: var(--2, 16px);
+    gap: var(--2, 1rem);
     flex-shrink: 0;
 
 }

@@ -1,10 +1,11 @@
 "use client"
 import { useState } from "react";
 import imgCadastro from "@/assets/images/img_cadastro.png"
-import RegistrationAlert from "@/components/RegistrationAlert";
-import Input from "@/components/Input";
-import LargeButton from "@/components/LargeButton";
+import RegistrationAlert from "@/components/registration_alert";
+import Input from "@/components/input";
+import LargeButton from "@/components/large_button";
 import "./style.css";
+
 
 function Cadastro() {
     const [sucess, setSucess] = useState(false);

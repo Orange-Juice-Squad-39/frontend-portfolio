@@ -1,22 +1,20 @@
-import logoOrange from "../assets/images/logo-orange.png";
-import perfilImg from "../assets/images/perfil-image.png";
-import notificationIcon from "../assets/images/NotificationsIcon.svg";
-import "../styles/header.css";
+import logoOrange from "@/assets/images/logo-orange.png";
+import perfilImg from "@/assets/images/perfil-image.png";
+import notificationIcon from "@/assets/images/NotificationsIcon.svg";
+import "./style.css";
 
 function Header() {
   return (
     <div className="header-container">
         <img src={logoOrange.src} className="header-logo"/>
         <div className="header-h6-container">
-            <a href="">
+            <a href="/portfolio">
                 <h6>Meus projetos</h6>
             </a>
-            <a href="">
+            <a href="/descobrir">
                 <h6>Descobrir</h6>
             </a>
         </div>
-
-        {/* <div className="header-empty-div"></div> */}
         
         <div className="header-right-container">
             <button className="header-button">

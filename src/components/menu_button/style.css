@@ -2,8 +2,8 @@
     width: 28px;
     height: 28px;
     position: absolute;
-    right: 16px;
-    top: 16px;
+    right: 1rem;
+    top: 1rem;
     flex-shrink: 0;
     background: var(--Color-Brand-Secundria-Secondary-70, #FC9);
     border: none;

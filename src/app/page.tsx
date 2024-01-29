@@ -1,28 +1,21 @@
-import styles from "./page.module.css";
+"use client"
+import { useState } from "react";
 import Login from "./login/page";
-import Portfolio from "./portfolio/page";
 import Descobrir from "./descobrir/page";
-
-import AddOrEditProject from "@/components/modals/add_or_edit_project";
-import DeleteProject from "@/components/modals/delete_project";
-import ProjectMenu from "@/components/modals/project_menu";
-import SucessModal from "@/components/modals/sucess";
-import ViewPost from "@/components/modals/view_post";
+// import styles from "./page.module.css";
 
 export default function Home() {
-
+  const [logged, setLogged] = useState(false);
 
   return (
     <main>
-      <Login/>
-      {/* <Portfolio/> */}
-      {/* <Descobrir/> */}
+      {logged &&(
+        <Descobrir/>
+      )}
 
-      {/* <AddOrEditProject adding={true}/> */}
-      {/* <DeleteProject/> */}
-      {/* <ProjectMenu/> */}
-      {/* <SucessModal text="Projeto adicionado"/> */}
-      {/* <ViewPost/> */}
+      {!logged &&(
+        <Login/>
+      )}
     </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
-import ButtonFirstProject from "./ButtonFirstProject";
-import "../styles/project-area.css";
+import ButtonFirstProject from "../button_add_first_project";
+import "./style.css";
  
 interface projAreaProps {
     emptyProj: boolean;

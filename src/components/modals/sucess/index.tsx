@@ -1,5 +1,4 @@
 import sucessImg from "@/assets/images/sucess.svg";
-// import "../../styles/sucess-modal.css";
 import "./style.css";
 
 interface sucessProps {

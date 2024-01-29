@@ -1,4 +1,4 @@
-import "../styles/tag.css";
+import "./style.css";
 
 interface tagProps {
     text: string;

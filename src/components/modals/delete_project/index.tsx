@@ -1,4 +1,4 @@
-import MediumSmallButton from "@/components/MediumSmallButton";
+import SmallButton from "@/components/small_button";
 import "./style.css";
 
 function DeleteProject() {
@@ -10,8 +10,8 @@ function DeleteProject() {
                 Se você prosseguir irá excluir o projeto do seu portfólio
             </text>
             <div className="delete-project-buttons">
-                <MediumSmallButton text="EXCLUIR" disabled={false}/>
-                <MediumSmallButton text="CANCELAR" disabled={true}/>
+                <SmallButton text="EXCLUIR" disabled={false}/>
+                <SmallButton text="CANCELAR" disabled={true}/>
             </div>
         </div>
     </div>
