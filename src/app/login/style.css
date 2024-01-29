@@ -57,12 +57,16 @@ a {
         background-color: #fff;
         overflow-x: hidden;
         overflow-y: auto;
-        background-image: url('../../assets/images/img_login_mobile.png');
+        /* background-image: url('../../assets/images/img_login_mobile.png'); */
         background-repeat: no-repeat;
     }
 
-    .login-h5{
+    .login-h3{
         text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
     }
 
     .left-components {
@@ -92,19 +96,17 @@ a {
         background-color: #fff;
         overflow-x: hidden;
         overflow-y: auto;
-        background-image: url('../../assets/images/img_login_mobile.png');
+        /* background-image: url('../../assets/images/img_login_mobile.png'); */
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    .login-h5{
-        text-align: center;
-    }
-
-
     .login-h3{
-        font-weight: 600;
-        font-size: 1.5rem;  
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
     }
 
     .left-components {
