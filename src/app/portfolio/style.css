@@ -5,7 +5,7 @@
     overflow-y: hidden;
 }
 
-.portfolio-bottom {
+.portfolio-content {
     height: 100vh;
     margin: 0 30px;
     justify-content: space-between;
@@ -31,8 +31,11 @@
 }
 
 
-.portfolio-h6 {
+h6 {
     color: var(--Neutral-Colors-Neutral-130, #0B0C0D);
+    font-style: normal;
+    line-height: 1.25rem; /* 100% */
+    letter-spacing: 0.0094rem;
     opacity: 0.6;
 }
 

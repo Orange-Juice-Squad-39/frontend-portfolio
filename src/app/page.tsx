@@ -1,37 +1,16 @@
 import styles from "./page.module.css";
-import Login from "../pages/Login";
-import Cadastro from "@/pages/Cadastro";
-import Portfolio from "@/pages/Portfolio";
-import AddEditProject from "@/components/modals/AddEditProject";
-import ViewPost from "@/components/modals/ViewPost";
-import SucessModal from "@/components/modals/SucessModal";
-import Descobrir from "@/pages/Descobrir";
-import DeleteProject from "@/components/modals/DeleteProject";
-import MenuProject from "@/components/modals/MenuProject";
-import MenuButton from "@/components/MenuButton";
-
+import Login from "./login/page";
+import Portfolio from "./portfolio/page";
+import Descobrir from "./descobrir/page";
 
 export default function Home() {
 
 
   return (
     <main>
-      {/* <Login/> */}
-      {/* <Cadastro/> */}
-
+      <Login/>
       {/* <Portfolio/> */}
-      {/* <AddProject/> */}
-
-      {/* <Portfolio/> */}
-      <Descobrir/>
-
-      {/* <AddEditProject adding={true}/> */}
-
-      {/* <ViewPost/> */}
-      {/* <SucessModal text="Projeto adicionado com sucesso!"/> */}
-      {/* <DeleteProject/> */}
-      {/* <MenuProject/> */}
-      {/* <MenuButton/> */}
+      {/* <Descobrir/> */}
     </main>
   );
 }

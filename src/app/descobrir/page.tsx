@@ -1,16 +1,14 @@
 import Header from "@/components/Header";
-import CardPerfil from "@/components/CardPerfil";
 import Input from "@/components/Input";
-import ProjectArea from "@/components/ProjectArea";
-import "../styles/descobrir.css";
-import modelo1 from "../assets/images/modelo1.png";
-import modelo2 from "../assets/images/modelo2.png";
-import modelo3 from "../assets/images/modelo3.png";
-import modelo4 from "../assets/images/modelo4.png";
-import perfil1 from "../assets/images/perfil-modelo1.png";
-import perfil2 from "../assets/images/perfil-modelo2.png";
-import perfil3 from "../assets/images/perfil-modelo3.png";
-import perfil4 from "../assets/images/perfil-modelo4.png";
+import modelo1 from "@/assets/images/modelo1.png"
+import modelo2 from "@/assets/images/modelo2.png";
+import modelo3 from "@/assets/images/modelo3.png";
+import modelo4 from "@/assets/images/modelo4.png";
+import perfil1 from "@/assets/images/perfil-modelo1.png";
+import perfil2 from "@/assets/images/perfil-modelo2.png";
+import perfil3 from "@/assets/images/perfil-modelo3.png";
+import perfil4 from "@/assets/images/perfil-modelo4.png";
+import "./style.css";
 
 function Descobrir() {
 

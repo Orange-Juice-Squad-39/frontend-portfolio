@@ -1,4 +1,4 @@
-.login-cadastro {
+.cadastro-container {
     display: flex;
     background-color: #fff;
     overflow-x: hidden;
@@ -21,13 +21,24 @@
     width: 100%;
 }
 
+h3 {
+    color: var(--Color-Brand-Primria-Primary-90, var(--Color-Brand-Primria-Primary-90, #224));
+    text-align: center;
+    font-style: normal;
+    line-height: 2.5rem; /* 83.333% */
+    margin-bottom: 2rem;
+}
+
 .name-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.surname {
-    /* margin-left: 16px; */
-    /* height: 100vh; */
+.name-input {
+    width: calc(50% - 0.5rem);
+}
+
+.surname-input {
+    width: calc(50% - 0.5rem);
 }

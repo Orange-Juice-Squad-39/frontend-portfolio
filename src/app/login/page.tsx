@@ -1,29 +1,29 @@
-import img_login from "../assets/images/img_login.png";
+import imgLogin from "@/assets/images/img_login.png";
 import TitleH3 from "@/components/TitleH3";
 import GoogleButton from "@/components/GoogleButton";
 import TitleH5 from "@/components/TitleH5";
 import Input from "@/components/Input";
 import LargeButton from "@/components/LargeButton";
 import Subtitle1 from "@/components/Subtitle1";
-import "../styles/login-cadastro.css";
+import "./style.css";
 
 function Login() {
   return (
-    <div className="login-cadastro">
+    <div className="login-container">
       <div className="left-components">
-        <img src={img_login.src}/>
+        <img src={imgLogin.src}/>
       </div>
       <div className="right-components">
-        <TitleH3 text="Entre no Orange Portfólio" />
+        <h3 className="login-h3">Entre no Orange Portfólio</h3>
         <GoogleButton/>
         <div>
-          <TitleH5 text="Faça login com email" />
+          <h5 className="login-h5">Faça login com email</h5>
           <Input label="Email address" type="email" name="email" placeholder=""/>
           <Input label="Password" type="password" name="password" placeholder=""/>
           <LargeButton text="ENTRAR" />
-          <a href="">
-            <Subtitle1 text="Cadastre-se" />
-          </a>
+          <div className="link-container">
+            <a href="/cadastro" className="subtitle1">Cadastre-se</a>
+          </div>
         </div>
       </div>
       
