@@ -9,6 +9,7 @@ export default function Home() {
 
   return (
     <main>
+
       {logged &&(
         <Descobrir/>
       )}
@@ -16,6 +17,15 @@ export default function Home() {
       {!logged &&(
         <Login/>
       )}
+      {/* <Login/> */}
+      {/* <Portfolio/> */}
+      {/* <Descobrir/> */}
+      {/* <AddOrEditProject adding={true}/> */}
+      {/* <DeleteProject/> */}
+      {/* <ProjectMenu/> */}
+      {/* <SucessModal text="Projeto adicionado"/> */}
+      {/* <ViewPost/> */}
+
     </main>
   );
 }

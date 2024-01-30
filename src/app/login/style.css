@@ -57,7 +57,7 @@ a {
         background-color: #fff;
         overflow-x: hidden;
         overflow-y: auto;
-        /* background-image: url('../../assets/images/img_login_mobile.png'); */
+        background-image: url('../../assets/images/img_login_mobile.png');
         background-repeat: no-repeat;
     }
 
@@ -96,7 +96,7 @@ a {
         background-color: #fff;
         overflow-x: hidden;
         overflow-y: auto;
-        /* background-image: url('../../assets/images/img_login_mobile.png'); */
+        background-image: url('../../assets/images/img_login_mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -116,7 +116,6 @@ a {
     .login-input{
         width: 100vw;
         padding: 0px 10vw;
-        /* background-color: red; */
     }
 
     .login-submit{
