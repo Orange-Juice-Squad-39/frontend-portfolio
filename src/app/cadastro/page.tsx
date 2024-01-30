@@ -23,14 +23,14 @@ function Cadastro() {
             <div>
             <div className="name-container">
                 <div className="name-input">
-                    <Input label="Nome *" type="text" name="name" placeholder=""/>
+                    <Input label="" type="text" name="name" placeholder="Nome *"/>
                 </div>
                 <div className="surname-input">
                     <Input label="" type="text" name="surname" placeholder="Sobrenome *"/>
                 </div>
             </div>
-            <Input label="Email address" type="email" name="email" placeholder=""/>
-            <Input label="Password" type="password" name="password" placeholder=""/>
+            <Input label="" type="email" name="email" placeholder="Email address"/>
+            <Input label="" type="password" name="password" placeholder="Password"/>
             <LargeButton text="CADASTRAR" />
             </div>
         </div>

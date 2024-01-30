@@ -7,7 +7,7 @@ import Descobrir from "./descobrir/page";
 import CardProject from "@/components/card_project";
 
 export default function Home() {
-  const [logged, setLogged] = useState(true);
+  const [logged, setLogged] = useState(false);
 
   return (
     <main>
