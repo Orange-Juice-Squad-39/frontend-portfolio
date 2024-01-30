@@ -5,6 +5,7 @@ import Descobrir from "./descobrir/page";
 
 
 import Portfolio from "./portfolio/page";
+import Cadastro from "./cadastro/page";
 // import styles from "./page.module.css";
 
 export default function Home() {
@@ -22,7 +23,8 @@ export default function Home() {
       )} */}
 
       {/* <Login/> */}
-      <Portfolio/>
+      <Cadastro/>
+      {/* <Portfolio/> */}
       {/* <Descobrir/> */}
       {/* <AddOrEditProject adding={true}/> */}
       {/* <DeleteProject/> */}
