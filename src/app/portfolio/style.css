@@ -58,3 +58,45 @@
     display: inline-flex;
     /* background-color: red; */
 }
+
+@media (max-width: 570px){
+
+    .portfolio-container {
+        overflow-y: auto;
+    }
+
+    .portfolio-content {
+        height: 100vh;
+        margin: 0px;
+        justify-content: center;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+            "A"
+            "B"
+            "C"
+        ;
+        grid-auto-rows: 25%;
+    }
+
+    .portfolio-h6 {
+        margin-top: 70px;
+        padding: 0px 30px;
+    }
+    
+    .portfolio-search{
+        height: 0px;
+    }
+
+    .portfolio-input {
+        width: 100vw;
+        padding: 0px 30px;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .portfolio-projects {
+        padding: 0px 30px;
+        width: 100%;
+    }
+}

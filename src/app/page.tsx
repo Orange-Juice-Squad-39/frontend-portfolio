@@ -2,23 +2,27 @@
 import { useState } from "react";
 import Login from "./login/page";
 import Descobrir from "./descobrir/page";
+
+
+import Portfolio from "./portfolio/page";
 // import styles from "./page.module.css";
 
 export default function Home() {
-  const [logged, setLogged] = useState(false);
+  // const [logged, setLogged] = useState(false);
 
   return (
     <main>
 
-      {logged &&(
+      {/* {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )}
+      )} */}
+
       {/* <Login/> */}
-      {/* <Portfolio/> */}
+      <Portfolio/>
       {/* <Descobrir/> */}
       {/* <AddOrEditProject adding={true}/> */}
       {/* <DeleteProject/> */}
