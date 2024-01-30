@@ -8,7 +8,7 @@
     border-radius: 8px;
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 40px;
     background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
 
     /* Modal */
@@ -16,13 +16,16 @@
 }
 
 .arrow-img {
-    width: 25px;
-    transform: rotate(90deg);
+    display: flex;
+    width: 15px;
+    height: 15px;
+    transform: rotate(-45deg);
     position: absolute;
-    right: 20px;
-    top: -16px;
+    right: 24px;
+    top: -7.5px;
     stroke-width: 3px;
     stroke: #FCFDFF;
+    background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
 }
 
 .menu-item {

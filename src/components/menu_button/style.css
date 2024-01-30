@@ -1,11 +1,12 @@
-.menu-button-container {
-    width: 28px;
-    height: 28px;
+.menu-button {
+    width: 32px;
+    height: 32px;
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 8px;
+    top: 8px;
     flex-shrink: 0;
     background: var(--Color-Brand-Secundria-Secondary-70, #FC9);
+    padding: 2px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
