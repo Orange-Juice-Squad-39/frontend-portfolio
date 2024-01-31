@@ -4,7 +4,9 @@ import Input from "@/components/input";
 import LargeButton from "@/components/large_button";
 import "./style.css";
 
+
 function Login() {
+
   return (
     <div className="login-container">
       <div className="left-components">
@@ -15,8 +17,8 @@ function Login() {
         <GoogleButton/>
         <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
-          <Input label="Email address" type="email" name="email" placeholder=""/>
-          <Input label="Password" type="password" name="password" placeholder=""/>
+          <Input label="" type="email" name="email" placeholder="Email address"/>
+          <Input label="" type="password" name="password" placeholder="Password"/>
           <div className="login-submit">
             <LargeButton text="ENTRAR"/>
           </div>

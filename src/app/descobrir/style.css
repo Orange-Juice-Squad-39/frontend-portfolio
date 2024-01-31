@@ -2,7 +2,7 @@ p{
     color: var(--color-neutral-110);
 }
 
-.descobrir-container {
+.descobrir-container { 
     background-color: #fff;
     height: 100vh;
     overflow-x: hidden;
@@ -75,10 +75,23 @@ p{
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .modelo-info img{
     width: 24px;
     height: 24px;
     border-radius: 50%;
+}
+
+.user-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tags-container {
+    display: inline-flex;
+    gap: 4px;
 }

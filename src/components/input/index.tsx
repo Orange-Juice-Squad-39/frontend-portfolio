@@ -13,13 +13,34 @@ interface inputProps {
 
 function Input({ label, type, name, placeholder }: inputProps) {
   const [showPassword, setShowPassword] = useState(false);
+  const [lbl, setLbl] = useState(label);
+  const [ph, setPh] = useState(placeholder);
   const inputType = showPassword ? "text" : type;
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleFocus = () => {
+    if (inputValue === "") {
+      setLbl(ph);
+      setPh("");
+    }
+  };
+
+  const handleBlur = () => {
+    if (inputValue === "") {
+      setPh(lbl);
+      setLbl("");
+    }
+  };
 
   return (
     <div className="input-container">
-        {label !== "" && (
+        {lbl !== "" && (
           <div className="label-container">
-            <label>{label}</label>
+            <label>{lbl}</label>
           </div>
         )}
 
@@ -27,7 +48,11 @@ function Input({ label, type, name, placeholder }: inputProps) {
           <input 
             type={inputType} 
             name={name} 
-            placeholder={placeholder}
+            placeholder={ph}
+            value={inputValue}
+            onChange={handleInputChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             className="input-content input-text"
           />
 

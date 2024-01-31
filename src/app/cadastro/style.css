@@ -35,10 +35,7 @@ h3 {
     justify-content: space-between;
 }
 
-.name-input {
-    width: calc(50% - 0.5rem);
-}
-
+.name-input,
 .surname-input {
     width: calc(50% - 0.5rem);
 }

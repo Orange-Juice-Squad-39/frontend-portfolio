@@ -1,14 +1,14 @@
 .tag-container {
     display: flex;
-    padding: 0.25rem;
+    padding: 4px;
     align-items: center;
-    border-radius: 6.25rem;
+    border-radius: 100px;
     background: var(--action-selected, rgba(0, 0, 0, 0.08));
 }
 
 .tag-text-container {
     display: flex;
-    padding: 0.1875rem 0.375rem;
+    padding: 3px 6px;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--none, 0px);
