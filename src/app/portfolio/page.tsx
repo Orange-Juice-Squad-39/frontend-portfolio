@@ -4,7 +4,7 @@ import Input from "@/components/input";
 import ProjectArea from "@/components/project_area";
 import "./style.css";
 
-function Portfolio() {
+function Portfolio() { 
   return (
     <div className="portfolio-container">
       <Header/>

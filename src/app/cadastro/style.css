@@ -42,3 +42,76 @@ h3 {
 .surname-input {
     width: calc(50% - 0.5rem);
 }
+
+@media (min-width: 580px) and (max-width: 1250px) {
+    .cadastro-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-image: url('../../assets/images/img_cadastro_mobile.png');
+        background-repeat: no-repeat;
+    }
+
+    .right-components h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .left-components {
+        display: none;
+    }
+
+
+}
+
+
+@media (max-width: 580px){
+    .cadastro-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-image: url('../../assets/images/img_cadastro_mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .name-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .name-container .name-input,
+    .name-container .surname-input{
+        width: 100%;
+        padding: 0px 10vw;
+    }
+
+    .name-container .name-input input,
+    .name-container .surname-input input{
+        width: 100%;
+        padding: 0px 10vw;
+    }
+    
+
+    .right-components h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    
+    .left-components {
+        display: none;
+    }
+
+
+}
