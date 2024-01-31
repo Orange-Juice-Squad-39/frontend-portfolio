@@ -11,15 +11,16 @@ export default function Home() {
 
   return (
     <main>
-      <AddOrEditProject adding={true}/>
 
-      {/* {logged &&(
+      {/* <AddOrEditProject adding={true}/> */}
+
+      {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )} */}
+      )}
     </main>
   );
 }

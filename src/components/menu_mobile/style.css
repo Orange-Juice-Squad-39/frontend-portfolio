@@ -1,0 +1,11 @@
+.menu-mobile{
+    width: 1.75rem;
+    height: 1rem;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.menu-mobile div{
+    background-color: #FFF;
+}
