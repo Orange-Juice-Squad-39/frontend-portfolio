@@ -1,5 +1,5 @@
 .portfolio-container {
-    background-color: #fff;
+    background-color: #fff; 
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -53,8 +53,9 @@
 
 .portfolio-projects {
     grid-area: C;
-    height: 33vh;
-    /* margin-top: 32px; */
-    display: inline-flex;
-    /* background-color: red; */
+    width: calc(100vw - 90px);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
 }

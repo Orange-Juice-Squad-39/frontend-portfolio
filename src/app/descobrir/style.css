@@ -2,7 +2,7 @@ p{
     color: var(--color-neutral-110);
 }
 
-.descobrir-container {
+.descobrir-container { 
     background-color: #fff;
     height: 100vh;
     overflow-x: hidden;

@@ -4,7 +4,7 @@ import Input from "@/components/input";
 import ProjectArea from "@/components/project_area";
 import CardProject from "@/components/card_project";
 import project from "@/assets/images/img_projeto.png";
-import perfil from "@/assets/images/perfil-image.png";
+import perfil from "@/assets/images/perfil-image.png"; 
 import "./style.css";
 
 function Portfolio() {
