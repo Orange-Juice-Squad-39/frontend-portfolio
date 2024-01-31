@@ -4,15 +4,13 @@ import Login from "./login/page";
 import Descobrir from "./descobrir/page";
 // import styles from "./page.module.css";
 
-import AddOrEditProject from "@/components/modals/add_or_edit_project";
+import MenuMobile from "@/components/menu_mobile";
 
 export default function Home() {
   const [logged, setLogged] = useState(false);
 
   return (
     <main>
-      <AddOrEditProject adding={true}/>
-
       {/* {logged &&(
         <Descobrir/>
       )}
@@ -20,6 +18,8 @@ export default function Home() {
       {!logged &&(
         <Login/>
       )} */}
+
+      <MenuMobile/>
     </main>
   );
 }
