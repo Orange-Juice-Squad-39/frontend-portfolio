@@ -17,3 +17,10 @@
 .non-empty-bg {
     background: rgba(230, 233, 242, 0.20);
 }
+
+
+@media (max-width: 570px){
+    .project-area-container { 
+        width: 100%;
+    }
+}

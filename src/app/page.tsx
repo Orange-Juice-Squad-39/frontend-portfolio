@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Login from "./login/page";
 import Descobrir from "./descobrir/page";
-import Portfolio from "./portfolio/page";
 // import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,24 +9,13 @@ export default function Home() {
 
   return (
     <main>
-
-      {/* {logged &&(
+      {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )} */}
-
-      {/* <Login/> */}
-      <Portfolio/>
-      {/* <Descobrir/> */}
-      {/* <AddOrEditProject adding={true}/> */}
-      {/* <DeleteProject/> */}
-      {/* <ProjectMenu/> */}
-      {/* <SucessModal text="Projeto adicionado"/> */}
-      {/* <ViewPost/> */}
-
+      )}
     </main>
   );
 }

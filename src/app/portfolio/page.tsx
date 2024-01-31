@@ -7,7 +7,7 @@ import project from "@/assets/images/img_projeto.png";
 import perfil from "@/assets/images/perfil-image.png"; 
 import "./style.css";
 
-function Portfolio() {
+function Portfolio() { 
   return (
     <div className="portfolio-container">
       <Header/>
