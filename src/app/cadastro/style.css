@@ -51,6 +51,15 @@ h3 {
         background-repeat: no-repeat;
     }
 
+    .internal-container{
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .internal-container button{
+        width: 100%;
+    }
+
     .right-components h3{
         text-align: center;
         font-size: 24px;
@@ -79,6 +88,15 @@ h3 {
         background-size: cover;
     }
 
+    .internal-container{
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .internal-container button{
+        width: 100%;
+    }
+
     .name-container {
         flex-direction: column;
         justify-content: flex-start;
@@ -88,13 +106,11 @@ h3 {
     .name-container .name-input,
     .name-container .surname-input{
         width: 100%;
-        padding: 0px 10vw;
     }
 
     .name-container .name-input input,
     .name-container .surname-input input{
         width: 100%;
-        padding: 0px 10vw;
     }
     
 

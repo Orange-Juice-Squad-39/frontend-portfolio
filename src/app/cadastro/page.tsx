@@ -26,7 +26,7 @@ function Cadastro() {
                 <RegistrationAlert text="Erro no cadastro"/>
             )}
             <h3>Cadastre-se</h3>
-            <div>
+            <div className="internal-container">
             <div className="name-container">
                 <div className="name-input">
                     <Input label="" type="text" name="name" placeholder="Nome *"/>

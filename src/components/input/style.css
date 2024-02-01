@@ -12,12 +12,12 @@
 }
 
 .input-content {
-    display: flex;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 30px;
     width: 100%;
     height: 100%;
     padding: var(--none, 0px) 12px;
-    align-items: center;
-    gap: var(--none, 0px);
     align-self: stretch;
     background: none;
     border: none;
@@ -58,4 +58,18 @@ label {
 .password-toggle {
     background: none;
     border: none;
+}
+
+@media (max-width: 1250px){
+    .input-content button{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+@media (max-width: 255px){
+    .input-content input::placeholder{
+        font-size: 10px;
+    }
 }
