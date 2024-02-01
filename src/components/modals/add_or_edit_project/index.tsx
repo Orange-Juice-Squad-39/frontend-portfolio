@@ -3,6 +3,7 @@ import { useState } from "react";
 import emptyImg from "@/assets/images/collections.svg";
 import SmallButton from "@/components/small_button";
 import Input from "@/components/input";
+import TagsInput from "@/components/tags_input";
 import "./style.css";
 
 interface addEditProps {
@@ -69,10 +70,16 @@ function AddOrEditProject({ adding }: addEditProps) {
                             placeholder="Título"
                         />
 
-                        <Input
+                        {/* <Input
                             label=""
                             type="text"
                             name="tags"
+                            placeholder="Tags"
+                        /> */}
+
+                        <TagsInput
+                            label="" 
+                            name="tags" 
                             placeholder="Tags"
                         />
 
