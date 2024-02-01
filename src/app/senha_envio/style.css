@@ -1,0 +1,171 @@
+.senha-envio-container {
+    display: flex;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.left-components {
+    height: 100vh;
+}
+
+.left-components img {
+    height: 100%;
+}
+
+.right-components {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h3 {
+    color: var(--Color-Brand-Primria-Primary-90, var(--Color-Brand-Primria-Primary-90, #224));
+    text-align: center;
+    font-style: normal;
+    line-height: 2.5rem;
+    /* 83.333% */
+    margin-bottom: 2rem;
+}
+
+h5 {
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+    font-style: normal;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+.subtitle1{
+    color: var(--color-neutral-100);
+}
+
+.link-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-container a {
+    color: var(--color-info-80);
+    font-style: normal;
+    line-height: 1rem;
+    letter-spacing: 0.0094rem;
+}
+
+.link-container a:hover{
+    filter: none;
+    text-decoration: underline;
+}
+
+
+.senha-envio-submit button,
+.senha-envio-submit button:hover,
+.senha-envio-submit button:focus{
+    background-color: var(--color-info-90);
+}
+
+.senha-envio-submit button:hover{
+    filter: brightness(0.7);
+}
+
+.senha-envio-submit button:focus{
+    filter: brightness(0.5);
+}
+
+@media (min-width: 560px) and (max-width: 1200px) {
+    .senha-envio-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-image: url('../../assets/images/img_login_mobile.png');
+        background-repeat: no-repeat;
+    }
+
+    .senha-envio-h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    h5 {
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    .left-components {
+        display: none;
+    }
+
+    .senha-envio-input{
+        width: 100vw;
+        padding: 0px 10vw;
+        /* background-color: red; */
+    }
+
+    .senha-envio-submit{
+        width: 100%;
+        background-color: red;
+    }
+
+    .senha-envio-submit button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px){
+    .senha-envio-container {
+        height: 100vh;
+        display: flex;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-image: url('../../assets/images/img_login_mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .senha-envio-h3{
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    h5 {
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    .left-components {
+        display: none;
+    }
+
+    .senha-envio-input{
+        width: 100vw;
+        padding: 0px 10vw;
+    }
+
+    .senha-envio-submit{
+        width: 100%;
+    }
+
+    .senha-envio-submit button{
+        width: 100%;
+    }
+
+    .link-container {
+        flex-direction: column;
+    }
+}
