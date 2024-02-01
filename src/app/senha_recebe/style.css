@@ -1,4 +1,4 @@
-.senha-envio-container {
+.senha-recebe-container {
     display: flex;
     background-color: #fff;
     overflow-x: hidden;
@@ -65,22 +65,22 @@ h5 {
 }
 
 
-.senha-envio-submit button,
-.senha-envio-submit button:hover,
-.senha-envio-submit button:focus{
+.senha-recebe-submit button,
+.senha-recebe-submit button:hover,
+.senha-recebe-submit button:focus{
     background-color: var(--color-info-90);
 }
 
-.senha-envio-submit button:hover{
+.senha-recebe-submit button:hover{
     filter: brightness(0.7);
 }
 
-.senha-envio-submit button:focus{
+.senha-recebe-submit button:focus{
     filter: brightness(0.5);
 }
 
 @media (min-width: 560px) and (max-width: 1200px) {
-    .senha-envio-container {
+    .senha-recebe-container {
         height: 100vh;
         display: flex;
         background-color: #fff;
@@ -90,7 +90,7 @@ h5 {
         background-repeat: no-repeat;
     }
 
-    .senha-envio-h3{
+    .senha-recebe-h3{
         text-align: center;
         font-size: 24px;
         font-style: normal;
@@ -107,24 +107,24 @@ h5 {
         display: none;
     }
 
-    .senha-envio-input{
+    .senha-recebe-input{
         width: 100vw;
         padding: 0px 10vw;
         /* background-color: red; */
     }
 
-    .senha-envio-submit{
+    .senha-recebe-submit{
         width: 100%;
         background-color: red;
     }
 
-    .senha-envio-submit button{
+    .senha-recebe-submit button{
         width: 100%;
     }
 }
 
 @media (max-width: 560px){
-    .senha-envio-container {
+    .senha-recebe-container {
         height: 100vh;
         display: flex;
         background-color: #fff;
@@ -135,7 +135,7 @@ h5 {
         background-size: cover;
     }
 
-    .senha-envio-h3{
+    .senha-recebe-h3{
         text-align: center;
         font-size: 24px;
         font-style: normal;
@@ -152,16 +152,16 @@ h5 {
         display: none;
     }
 
-    .senha-envio-input{
+    .senha-recebe-input{
         width: 100vw;
         padding: 0px 10vw;
     }
 
-    .senha-envio-submit{
+    .senha-recebe-submit{
         width: 100%;
     }
 
-    .senha-envio-submit button{
+    .senha-recebe-submit button{
         width: 100%;
     }
 

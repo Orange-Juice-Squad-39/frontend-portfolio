@@ -1,31 +1,27 @@
 import imgLogin from "@/assets/images/img_login.png";
-import GoogleButton from "@/components/google_button";
 import Input from "@/components/input";
 import LargeButton from "@/components/large_button";
 import "./style.css";
  
 
-function SenhaEnvio() {
+function SenhaRecebe() {
 
   return (
-    <div className="senha-envio-container">
+    <div className="senha-recebe-container">
       <div className="left-components">
         <img src={imgLogin.src}/>
       </div>
       <div className="right-components">
-        <h3 className="senha-envio-h3">Redefinição de senha</h3>
-        <h5>Digite seu e-mail no campo abaixo e lhe<br/>enviaremos uma nova senha.</h5>
-        <div className="senha-envio-input">
+        <h3 className="senha-recebe-h3">Redefinição de senha</h3>
+        <h5>Por favor, insira no campo abaixo a senha que<br/>você deseja para redefinir sua senha.</h5>
+        <div className="senha-recebe-input">
 
-          <Input label="" type="email" name="email" placeholder="Email address"/>
-          <div className="senha-envio-submit">
-            <LargeButton text="Redefinir senha"/>
+        <Input label="" type="password" name="password" placeholder="Password"/>
+            <Input label="" type="password" name="confirm-password" placeholder="Confirm password"/>
+          <div className="senha-recebe-submit">
+            <LargeButton text="Redefinir"/>
           </div>
           
-          <div className="link-container">
-            <div className="subtitle1">Já possui cadastro?</div>
-            <a href="/recuperacao" className="subtitle1">Faça seu login!</a>
-          </div>
         </div>
       </div>
       
@@ -33,4 +29,4 @@ function SenhaEnvio() {
   )
 }
 
-export default SenhaEnvio
+export default SenhaRecebe
