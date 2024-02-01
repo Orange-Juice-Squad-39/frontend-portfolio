@@ -1,6 +1,6 @@
-.cadastro-container {
+.edicao-container {
     display: flex;
-    background-color: #fff;
+    background-color: #fff; 
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -41,7 +41,7 @@ h3 {
 }
 
 @media (min-width: 580px) and (max-width: 1250px) {
-    .cadastro-container {
+    .edicao-container {
         height: 100vh;
         display: flex;
         background-color: #fff;
@@ -77,7 +77,7 @@ h3 {
 
 
 @media (max-width: 580px){
-    .cadastro-container {
+    .edicao-container {
         height: 100vh;
         display: flex;
         background-color: #fff;
