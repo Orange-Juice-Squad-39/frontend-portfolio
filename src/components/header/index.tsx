@@ -7,7 +7,9 @@ import "./style.css";
 function Header() {
   return (
     <div className="header-container">
-        {/* <MenuMobile/> */}
+        <div className="menu-burguer">
+            <MenuMobile/>
+        </div>
         <img src={logoOrange.src} className="header-logo"/>
         <div className="header-h6-container">
             <a href="/portfolio">
