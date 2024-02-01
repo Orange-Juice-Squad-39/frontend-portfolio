@@ -8,24 +8,24 @@ import LargeButton from "@/components/large_button";
 import "./style.css";
 
 
-function Cadastro() {
+function Edicao() {
     const [sucess, setSucess] = useState(false);
     const [error, setError] = useState(false);
 
     return (
-        <div className="cadastro-container">
+        <div className="edicao-container">
         <div className="left-components">
             <img src={imgCadastro.src}/>
         </div>
         <div className="right-components">
             {sucess && (
-                <RegistrationError text="Cadastro feito com sucesso"/>
+                <RegistrationError text="edicao feito com sucesso"/>
             )}
 
             {error && (
-                <RegistrationAlert text="Erro no cadastro"/>
+                <RegistrationAlert text="Erro no edicao"/>
             )}
-            <h3>Cadastre-se</h3>
+            <h3>Editar perfil</h3>
             <div className="internal-container">
             <div className="name-container">
                 <div className="name-input">
@@ -38,7 +38,9 @@ function Cadastro() {
             <Input label="" type="email" name="email" placeholder="Email address"/>
             <Input label="" type="password" name="password" placeholder="Password"/>
             <Input label="" type="password" name="confirm-password" placeholder="Confirm password"/>
-            <LargeButton text="CADASTRAR" />
+   
+
+            <LargeButton text="EDITAR" />
             </div>
         </div>
         
@@ -46,4 +48,4 @@ function Cadastro() {
     )
 }
 
-export default Cadastro
+export default Edicao

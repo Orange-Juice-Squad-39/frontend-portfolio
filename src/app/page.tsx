@@ -6,6 +6,7 @@ import Descobrir from "./descobrir/page";
 
 import TagsInput from "@/components/tags_input";
 import AddOrEditProject from "@/components/modals/add_or_edit_project";
+import Edicao from "./edicao/page";
 
 export default function Home() {
   const [logged, setLogged] = useState(false);
@@ -21,7 +22,10 @@ export default function Home() {
       )} */}
 
       {/* <TagsInput label="" name="tags" placeholder="Tags"/> */}
-      <AddOrEditProject adding={true}/>
+      {/* <AddOrEditProject adding={true}/> */}
+
+      <Edicao/>
+
     </main>
   );
 }
