@@ -11,6 +11,7 @@
 .menu-burguer{
     display: none;
     align-items: center;
+    margin-top: 7px;
 }
 
 .header-logo {
@@ -84,5 +85,7 @@ h6 {
 
     .menu-burguer{
         display: flex;
+        background: none;
+        border: none;
     }
 }
