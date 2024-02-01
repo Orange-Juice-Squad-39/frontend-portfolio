@@ -7,7 +7,7 @@ import TagsInput from "@/components/tags_input";
 import "./style.css";
 
 interface addEditProps {
-    adding: boolean;
+    adding?: boolean;
 }
 
 function AddOrEditProject({ adding }: addEditProps) {

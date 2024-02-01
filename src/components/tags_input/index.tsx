@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Tag from "../tag";
 import "./style.css";
 
@@ -22,12 +22,12 @@ function TagsInput({ label, name, placeholder }: tagsInputProps) {
         }
     };
 
-    const handleBlur = () => {
-        if (tagInputValue === "") {
-            setPh(`${lbl} (aperte enter para adicionar)`);
+    useEffect(() => {
+        if (tags.length <= 0) {
+            setPh(`${placeholder} (aperte enter para adicionar)`);
             setLbl("");
         }
-    };
+    }, [tags]);
 
     const handleTagInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTagInputValue(e.target.value);
@@ -69,7 +69,6 @@ function TagsInput({ label, name, placeholder }: tagsInputProps) {
                     onChange={handleTagInputChange}
                     onKeyDown={handleTagInputKeyPress}
                     onFocus={handleFocus}
-                    onBlur={handleBlur}
                     className="tags-input-text"
                 />
             </div>
