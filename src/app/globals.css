@@ -142,6 +142,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: all 200ms linear;
+}
+
+a:hover{
+  filter: brightness(0.5);
 }
 
 /* GLOBAL */
