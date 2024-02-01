@@ -48,6 +48,8 @@ function Portfolio() {
             />
           </div>
         </div>
+
+        <footer></footer>
     </div>
   )
 }

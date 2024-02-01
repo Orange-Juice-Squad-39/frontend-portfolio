@@ -20,7 +20,6 @@ p{
 		"C C C"
 	;
     grid-auto-rows: 25%;
-    /* background-color: red; */
 }
 
 
@@ -94,4 +93,124 @@ p{
 .tags-container {
     display: inline-flex;
     gap: 4px;
+}
+
+
+@media (min-width: 550px) and (max-width: 850px){
+
+    .descobrir-container {
+        overflow-y: auto;
+    }
+
+    .descobrir-bottom {
+        height: 100vh;
+        margin: 0px;
+        justify-content: center;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+            "A"
+            "B"
+            "C"
+        ;
+        grid-auto-rows: 25%;
+    }
+
+    .descobrir-h4 {
+        font-size: 24px;
+        margin: 0px 20px;
+        margin-top: 100px ;
+    }
+
+    .descobrir-card {
+        height: calc(1fr - 73px);
+        margin: 40px 0px;
+    }
+
+    .descobrir-h6 {
+        margin-top: 70px;
+        padding: 0px 30px;
+    }
+    
+    .descobrir-search{
+        height: calc(1fr - 73px);
+        margin: 60px 0px;
+    }
+
+    .descobrir-input {
+        width: 100vw;
+        padding: 0px 30px;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .descobrir-projects {
+        margin: 100px 0px;
+        padding: 0px 30px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+}
+
+
+@media (max-width: 550px){
+
+    .descobrir-container {
+        overflow-y: auto;
+    }
+
+    .descobrir-bottom {
+        height: 100vh;
+        margin: 0px;
+        justify-content: center;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+            "A"
+            "B"
+            "C"
+        ;
+        grid-auto-rows: 25%;
+    }
+
+    .descobrir-h4 {
+        font-size: 16px;
+        margin: 0px 20px;
+        margin-top: 100px;
+    }
+
+    .descobrir-card {
+        height: calc(1fr - 73px);
+        margin: 40px 0px;
+    }
+
+    .descobrir-h6 {
+        margin-top: 70px;
+        padding: 0px 30px;
+    }
+    
+    .descobrir-search{
+        height: calc(1fr - 73px);
+        margin: 60px 0px;
+    }
+
+    .descobrir-input {
+        width: 100vw;
+        padding: 0px 30px;
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .descobrir-projects {
+        margin: 100px 0px;
+        padding: 0px 30px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
 }

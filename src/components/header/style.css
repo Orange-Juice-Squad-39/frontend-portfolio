@@ -8,6 +8,11 @@
     background: #113;    
 }
 
+.menu-burguer{
+    display: none;
+    align-items: center;
+}
+
 .header-logo {
     height: 41px;
 }
@@ -64,4 +69,20 @@ h6 {
 
 .header-empty-div {
     width: 30%;
+}
+
+
+
+@media (max-width: 850px){
+    .header-container {
+        grid-template-columns: 40px 1fr 1fr;
+    }
+
+    .header-h6-container {
+        display: none;
+    }
+
+    .menu-burguer{
+        display: flex;
+    }
 }
