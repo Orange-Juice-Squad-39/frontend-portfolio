@@ -2,6 +2,7 @@
 import { useState } from "react";
 import imgCadastro from "@/assets/images/img_cadastro.png"
 import RegistrationAlert from "@/components/registration_alert";
+import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
 import LargeButton from "@/components/large_button";
 import "./style.css";
@@ -9,6 +10,7 @@ import "./style.css";
 
 function Cadastro() {
     const [sucess, setSucess] = useState(false);
+    const [error, setError] = useState(false);
 
     return (
         <div className="cadastro-container">
@@ -17,7 +19,11 @@ function Cadastro() {
         </div>
         <div className="right-components">
             {sucess && (
-                <RegistrationAlert text="Cadastro feito com sucesso"/>
+                <RegistrationError text="Cadastro feito com sucesso"/>
+            )}
+
+            {error && (
+                <RegistrationAlert text="Erro no cadastro"/>
             )}
             <h3>Cadastre-se</h3>
             <div>
@@ -31,6 +37,7 @@ function Cadastro() {
             </div>
             <Input label="" type="email" name="email" placeholder="Email address"/>
             <Input label="" type="password" name="password" placeholder="Password"/>
+            <Input label="" type="password" name="confirm-password" placeholder="Confirm password"/>
             <LargeButton text="CADASTRAR" />
             </div>
         </div>

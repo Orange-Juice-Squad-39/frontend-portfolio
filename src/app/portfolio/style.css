@@ -60,7 +60,8 @@
     grid-auto-rows: 1fr;
 }
 
-@media (max-width: 570px){
+
+@media (max-width: 850px){
 
     .portfolio-container {
         overflow-y: auto;
@@ -103,8 +104,12 @@
     }
 
     .portfolio-projects {
-        margin: 60px 0px;
+        margin: 100px 0px;
         padding: 0px 30px;
         width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
+
+
 }

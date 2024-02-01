@@ -119,15 +119,13 @@
 }
 
 .description-input {
-    color: var(--Neutral-Colors-Neutral-120, #303133);
-    font-feature-settings: 'clig' off, 'liga' off;
-
-    display: flex;
-    height: 120px;
-    padding: 12px;
+    width: 100%;
+    min-height: 120px;
+    padding: 16px 24px;
     border-radius: var(--borderRadius, 4px);
     border: var(--none, 1px) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
     background: none;
+    color: var(--Neutral-Colors-Neutral-120, #303133);
 }
 
 .add-project-bottom-container {
@@ -147,4 +145,22 @@
     display: flex;
     align-items: flex-start;
     gap: var(--2, 16px);
+}
+
+.description-container {
+    position: relative;
+}
+
+.description-label {
+    position: absolute;
+    left: 1px;
+    margin-top: -9px;
+    margin-left: 0.625rem;
+    padding-left: 0.1875rem;
+    padding-right: 0.1875rem;
+    background-color: #fff;
+}
+
+.description-input:focus {
+    outline: none; /* Remove a borda interna azul quando o textarea está em foco */
 }
