@@ -24,7 +24,7 @@ function SenhaEnvio() {
           
           <div className="link-container">
             <div className="subtitle1">Já possui cadastro?</div>
-            <a href="/recuperacao" className="subtitle1">Faça seu login!</a>
+            <a href="/" className="subtitle1">Faça seu login!</a>
           </div>
         </div>
       </div>

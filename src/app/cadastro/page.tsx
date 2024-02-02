@@ -4,13 +4,31 @@ import imgCadastro from "@/assets/images/img_cadastro.png"
 import RegistrationAlert from "@/components/registration_alert";
 import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
+import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
 import "./style.css";
 
 
 function Cadastro() {
-    const [sucess, setSucess] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    const handleRegister = () => {
+        // Verifique se a senha e a confirmação da senha são iguais
+        if (password === confirmPassword) {
+            // Lógica de registro bem-sucedida
+            setSuccess(true);
+            setError(false);
+        } else {
+            // Lógica de erro ao confirmar a senha
+            setSuccess(false);
+            setError(true);
+        }
+    };
+
+    // console.log(password === confirmPassword);
 
     return (
         <div className="cadastro-container">
@@ -18,7 +36,7 @@ function Cadastro() {
             <img src={imgCadastro.src}/>
         </div>
         <div className="right-components">
-            {sucess && (
+            {success && (
                 <RegistrationError text="Cadastro feito com sucesso"/>
             )}
 
@@ -35,10 +53,16 @@ function Cadastro() {
                     <Input label="" type="text" name="surname" placeholder="Sobrenome *"/>
                 </div>
             </div>
-            <Input label="" type="email" name="email" placeholder="Email address"/>
-            <Input label="" type="password" name="password" placeholder="Password"/>
-            <Input label="" type="password" name="confirm-password" placeholder="Confirm password"/>
-            <LargeButton text="CADASTRAR" />
+                <Input label="" type="email" name="email" placeholder="Email address"/>
+                <PasswordInput 
+                    placeholder="Password"
+                    onPasswordChange={(value) => setPassword(value)}
+                />
+                <PasswordInput 
+                    placeholder="Confirm password"
+                    onPasswordChange={(value) => setConfirmPassword(value)}
+                />
+                <LargeButton text="CADASTRAR" /*onClick={handleRegister}*/ /> 
             </div>
         </div>
         
