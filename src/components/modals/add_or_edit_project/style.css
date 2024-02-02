@@ -2,7 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
+    max-width: 890px;
+    max-height: 522px;
+    border-radius: var(--none, 0px);
+    background: #FEFEFE;
+    padding: 24px 32px;
+    z-index: 999;
 }
 
 .add-project-container {
@@ -16,7 +27,8 @@
     width: 890px;
     height: 522px;
     background: #FEFEFE;
-    padding: 24px 32px;
+    padding: 24px 12px;
+    gap: 25px;
 }
 
 
@@ -36,8 +48,15 @@
 
 .add-project-h5,
 .content-left-text,
-.view-post-button{
+.view-post-button {
     color: var(--color-neutral-110);
+}
+
+.button-text{
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+    line-height: 15px;
+    opacity: 0.6;
+    text-align: left !important;
 }
 
 .add-project-img {

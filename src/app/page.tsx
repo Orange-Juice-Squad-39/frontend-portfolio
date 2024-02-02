@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Login from "./login/page";
 import Descobrir from "./descobrir/page";
-import AddOrEditProject from "@/components/modals/add_or_edit_project";
 // import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,15 +9,13 @@ export default function Home() {
 
   return (
     <main>
-      {/* {logged &&(
+      {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )} */}
-
-      <AddOrEditProject/>
+      )}
     </main>
   );
 }
