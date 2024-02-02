@@ -70,13 +70,6 @@ function AddOrEditProject({ adding }: addEditProps) {
                             placeholder="Título"
                         />
 
-                        {/* <Input
-                            label=""
-                            type="text"
-                            name="tags"
-                            placeholder="Tags"
-                        /> */}
-
                         <TagsInput
                             label="" 
                             name="tags" 

@@ -1,5 +1,17 @@
 .first-project-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17% 10%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: var(--borderRadius, 0.25rem);
+    margin-right: 1.5rem;
+    background: var(--Neutral-Colors-Neutral-70, #E6E9F2);
+}
+
+.first-project-button {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +26,7 @@
     width: 100%;
     max-width: 46px;
     flex-shrink: 0;
+    margin-bottom: 5%;
 }
 
 .first-project-text {
@@ -22,4 +35,11 @@
     width: 100%;
     color: var(--Neutral-Colors-Neutral-120, #303133);
     opacity: 0.6;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 570px){
+    .first-project-container { 
+        width: 100%;
+    }
 }

@@ -1,7 +1,7 @@
 import "./style.css";
 
 interface largeButtonProps {
-    text: string;
+  text: string;
 }
 
 function LargeButton({ text }: largeButtonProps) {

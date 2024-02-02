@@ -5,8 +5,8 @@ import invisibleEye from "@/assets/images/invisibleEye.svg";
 import "./style.css";
 
 interface inputProps {
-    placeholder: string;
-    onPasswordChange: (value: string) => void;
+  placeholder: string;
+  onPasswordChange: (value: string) => void;
 }
 
 function PasswordInput({ placeholder, onPasswordChange }: inputProps) {
