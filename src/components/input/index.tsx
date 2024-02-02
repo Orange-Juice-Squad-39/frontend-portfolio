@@ -5,12 +5,12 @@ import invisibleEye from "@/assets/images/invisibleEye.svg";
 import "./style.css";
 
 interface inputProps {
-    label: string;
-    type: string;
-    name: string;
-    placeholder: string;
-    value: string
-    onChange: (value: string) => void;
+  label: string;
+  type: string;
+  name: string;
+  placeholder: string;
+  value: string
+  onChange: (value: string) => void;
 }
 
 function Input({ label, type, name, placeholder, value, onChange }: inputProps) {
@@ -18,10 +18,11 @@ function Input({ label, type, name, placeholder, value, onChange }: inputProps) 
   const [lbl, setLbl] = useState(label);
   const [ph, setPh] = useState(placeholder);
   const inputType = showPassword ? "text" : type;
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(value);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
+    () => onChange(e.target.value);
   };
 
   const handleFocus = () => {
