@@ -2,7 +2,7 @@
     background-color: #fff; 
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .portfolio-content {
@@ -17,7 +17,6 @@
 		"C . . . ."
 	;
     grid-auto-rows: 25%;
-    /* background-color: red; */
 }
 
 .portfolio-card {
@@ -26,8 +25,6 @@
     align-items: center;
     justify-content: center;
     height: 33vh;
-    /* margin-top: 7vh; */
-    /* background-color: aqua; */
 }
 
 
@@ -58,6 +55,16 @@
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 998;
 }
 
 

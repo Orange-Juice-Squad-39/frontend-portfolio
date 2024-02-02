@@ -7,7 +7,7 @@ import TagsInput from "@/components/tags_input";
 import "./style.css";
 
 interface addEditProps {
-    adding: boolean;
+    adding?: boolean;
 }
 
 function AddOrEditProject({ adding }: addEditProps) {
@@ -69,13 +69,6 @@ function AddOrEditProject({ adding }: addEditProps) {
                             name="title"
                             placeholder="Título"
                         />
-
-                        {/* <Input
-                            label=""
-                            type="text"
-                            name="tags"
-                            placeholder="Tags"
-                        /> */}
 
                         <TagsInput
                             label="" 

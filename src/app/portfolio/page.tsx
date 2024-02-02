@@ -1,13 +1,26 @@
+'use client'
+import { useState } from 'react';
 import Header from "@/components/header";
 import CardPerfil from "@/components/card_perfil.tsx";
 import Input from "@/components/input";
-import ProjectArea from "@/components/project_area";
+import ButtonFirstProject from "@/components/button_add_first_project";
 import CardProject from "@/components/card_project";
 import project from "@/assets/images/img_projeto.png";
 import perfil from "@/assets/images/perfil-image.png"; 
 import "./style.css";
+import AddOrEditProject from '@/components/modals/add_or_edit_project';
 
 function Portfolio() { 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="portfolio-container">
       <Header/>
@@ -23,9 +36,16 @@ function Portfolio() {
           </div>
           <div className="portfolio-projects">
 
-            {/* <ProjectArea emptyProj={true}/> */}
+            <ButtonFirstProject onClick={openModal}/>
+
+            {isModalOpen && (
+              <>
+                <div className="overlay" onClick={closeModal}></div>
+                <AddOrEditProject adding={true} />
+              </>
+            )}
             
-            <CardProject
+            {/* <CardProject
               projImg={project}
               perfilImg={perfil}
               name="Camila Soares"
@@ -45,7 +65,7 @@ function Portfolio() {
               name="Camila Soares"
               data="12/23"
               portfolio={true}
-            />
+            /> */}
           </div>
         </div>
 

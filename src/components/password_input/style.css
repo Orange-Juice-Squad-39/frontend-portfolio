@@ -1,4 +1,4 @@
-.input-container {
+.password-input-container {
     display: flex;
     height: 56px;
     flex-direction: column;
@@ -11,7 +11,7 @@
     border: var(--none, 0.0625rem) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
 }
 
-.input-content {
+.password-input-content {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 30px;
@@ -24,7 +24,7 @@
     outline: 0px;
 }
 
-.input-text {
+.password-input-text {
     color: var(--Neutral-Colors-Neutral-120, #303133);
     font-feature-settings: 'clig' off, 'liga' off;
     font-style: normal;
@@ -32,7 +32,7 @@
     letter-spacing: 0.0094rem;
 }
 
-.label-container {
+.password-label-container {
     margin-top: -0.8125rem;
     margin-left: 0.625rem;
     padding-left: 0.1875rem;
@@ -49,8 +49,19 @@ label {
     letter-spacing: 0.025rem;
 }
 
+.eye-button {
+    width: var(--3, 1.5rem);
+    height: var(--3, 1.5rem);
+    flex-shrink: 0;
+}
+
+.password-toggle {
+    background: none;
+    border: none;
+}
+
 @media (max-width: 1250px){
-    .input-content button{
+    .password-input-content button{
         display: flex;
         justify-content: flex-end;
     }
@@ -58,7 +69,7 @@ label {
 
 
 @media (max-width: 255px){
-    .input-content input::placeholder{
+    .password-input-content input::placeholder{
         font-size: 10px;
     }
 }
