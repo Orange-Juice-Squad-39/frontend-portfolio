@@ -9,9 +9,11 @@ interface inputProps {
     type: string;
     name: string;
     placeholder: string;
+    value: string
+    onChange: (value: string) => void;
 }
 
-function Input({ label, type, name, placeholder }: inputProps) {
+function Input({ label, type, name, placeholder, value, onChange }: inputProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [lbl, setLbl] = useState(label);
   const [ph, setPh] = useState(placeholder);
