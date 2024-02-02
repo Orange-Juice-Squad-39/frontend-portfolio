@@ -7,7 +7,7 @@ import TagsInput from "@/components/tags_input";
 import "./style.css"; 
 
 interface addEditProps {
-    adding?: boolean;
+    adding: boolean;
 }
 
 function AddOrEditProject({ adding }: addEditProps) {
@@ -35,56 +35,49 @@ function AddOrEditProject({ adding }: addEditProps) {
 
     return (
         <div className="add-project">
-            
             <div className="add-project-container">
-
-                <div className="add-project-header">
-                    <h5 className="add-project-h5">
-                        {adding && (
-                            <text>Adicionar projeto</text>
-                        )}
-                        {!adding && (
-                            <text>Editar projeto</text>
-                        )}
-                    </h5>
-                </div>
-
-                <div className="add-project-left">
-
-                    <text className="subtitle1 content-left-text">
-                        Selecione o conteúdo que você deseja fazer upload
-                    </text>
-
-                    <div className="add-project-img">
-                        <button className="add-img-button">
-                            <div className="button-content">
-                                <img src={emptyImg.src} className="empty-img"/>
-                                <div className="button-text">
-                                    <text className="body2">
-                                        Compartilhe seu talento com milhares de pessoas
-                                    </text>
+                <h5 className="add-project-h5">
+                    {adding && (
+                        <text>Adicionar projeto</text>
+                    )}
+                    {!adding && (
+                        <text>Editar projeto</text>
+                    )}
+                </h5>
+                <div className="add-project-content">
+                    <div className="add-project-content-left">
+                        <text className="subtitle1 content-left-text">
+                            Selecione o conteúdo que você deseja fazer upload
+                        </text>
+                        <div className="add-project-img">
+                            <button className="add-img-button">
+                                <div className="button-content">
+                                    <img src={emptyImg.src} className="empty-img"/>
+                                    <div className="button-text">
+                                        <text className="body2">
+                                            Compartilhe seu talento com milhares de pessoas
+                                        </text>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
+                            </button>
+                        </div>
+
+                        
                     </div>
-
-                    <a href="" className="view-post-button subtitle1">Visualizar publicação</a>
-                    <div className="bottom-buttons">
-                        <SmallButton text="SALVAR" disabled={false}/>
-                        <SmallButton text="CANCELAR" disabled={true}/>
-                    </div>
-
-                </div>
-
-
-                <div className="add-project-right">
-
-                <Input
+                    <div className="add-project-content-right">
+                        <Input
                             label=""
                             type="text"
                             name="title"
                             placeholder="Título"
                         />
+
+                        {/* <Input
+                            label=""
+                            type="text"
+                            name="tags"
+                            placeholder="Tags"
+                        /> */}
 
                         <TagsInput
                             label="" 
@@ -111,15 +104,16 @@ function AddOrEditProject({ adding }: addEditProps) {
                             />
                             <label className="description-label">{label}</label>
                         </div>
-
+                    </div>
                 </div>
-
-
-
-
+                <div className="add-project-bottom-container">
+                    <a href="" className="view-post-button subtitle1">Visualizar publicação</a>
+                    <div className="bottom-buttons">
+                        <SmallButton text="SALVAR" disabled={false}/>
+                        <SmallButton text="CANCELAR" disabled={true}/>
+                    </div>
+                </div>
             </div>
-
-
         </div>
     )
 }
