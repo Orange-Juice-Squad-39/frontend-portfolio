@@ -86,7 +86,7 @@
 .post-img-container {
     grid-area: D;
     width: 838px;
-    height: 585px;
+    height: none;
     flex-shrink: 0;
     background: url(), lightgray 50% / cover no-repeat;
     margin: 32px auto 64px;
