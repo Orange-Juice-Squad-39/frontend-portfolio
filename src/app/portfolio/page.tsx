@@ -41,7 +41,7 @@ function Portfolio() {
             {isModalOpen && (
               <>
                 <div className="overlay" onClick={closeModal}></div>
-                <AddOrEditProject adding={true} />
+                <AddOrEditProject adding={true} closeModal={closeModal} />
               </>
             )}
             
@@ -74,4 +74,4 @@ function Portfolio() {
   )
 }
 
-export default Portfolio
+export default Portfolio;

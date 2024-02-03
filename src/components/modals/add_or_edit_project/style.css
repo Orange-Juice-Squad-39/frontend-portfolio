@@ -14,6 +14,7 @@
     background: #FEFEFE;
     padding: 24px 32px;
     z-index: 999;
+    /* background-color: transparent; */
 }
 
 .add-project-container {
@@ -128,10 +129,7 @@
 @media (max-width: 920px){
 
     .add-project {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(100vh + 400px); 
+        background: transparent;
     }
 
     .add-project-container {

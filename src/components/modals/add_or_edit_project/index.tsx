@@ -1,4 +1,6 @@
-"use client"
+// src\components\modals\add_or_edit_project.tsx
+
+"use client";
 import { useState } from "react";
 import emptyImg from "@/assets/images/collections.svg";
 import SmallButton from "@/components/small_button";
@@ -8,9 +10,10 @@ import "./style.css";
 
 interface addEditProps {
     adding?: boolean;
+    closeModal: () => void; // Adiciona a propriedade closeModal à interface
 }
 
-function AddOrEditProject({ adding }: addEditProps) {
+function AddOrEditProject({ adding, closeModal }: addEditProps) {
     const [label, setLabel] = useState('');
     const [placeholder, setPlaceholder] = useState('Descrição');
     const [inputValue, setInputValue] = useState('');
@@ -20,22 +23,26 @@ function AddOrEditProject({ adding }: addEditProps) {
     };
 
     const handleFocus = () => {
-    if (inputValue === '') {
-        setLabel(placeholder);
-        setPlaceholder('');
-    }
+        if (inputValue === '') {
+            setLabel(placeholder);
+            setPlaceholder('');
+        }
     };
 
     const handleBlur = () => {
-    if (inputValue === '') {
-        setPlaceholder(label);
-        setLabel('');
-    }
+        if (inputValue === '') {
+            setPlaceholder(label);
+            setLabel('');
+        }
+    };
+
+    const close = () => {
+        closeModal(); // Chama a função closeModal passada como propriedade
     };
 
     return (
-        <div className="add-project">
-            
+        <div className="add-project" onClick={close}>
+
             <div className="add-project-container">
 
                 <div className="add-project-header">
@@ -76,52 +83,47 @@ function AddOrEditProject({ adding }: addEditProps) {
 
                 </div>
 
-
                 <div className="add-project-right">
 
-                <Input
-                            label=""
-                            type="text"
-                            name="title"
-                            placeholder="Título"
-                        />
+                    <Input
+                        label=""
+                        type="text"
+                        name="title"
+                        placeholder="Título"
+                    />
 
-                        <TagsInput
-                            label="" 
-                            name="tags" 
-                            placeholder="Tags"
-                        />
+                    <TagsInput
+                        label="" 
+                        name="tags" 
+                        placeholder="Tags"
+                    />
 
-                        <Input
-                            label=""
-                            type="url"
-                            name="link"
-                            placeholder="Link"
+                    <Input
+                        label=""
+                        type="url"
+                        name="link"
+                        placeholder="Link"
+                    />
+                    
+                    <div className="description-container">
+                        <textarea 
+                            name="description" 
+                            placeholder={placeholder}
+                            value={inputValue}
+                            onChange={handleInputChange}
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
+                            className="description-input"
                         />
-                        
-                        <div className="description-container">
-                            <textarea 
-                                name="description" 
-                                placeholder={placeholder}
-                                value={inputValue}
-                                onChange={handleInputChange}
-                                onFocus={handleFocus}
-                                onBlur={handleBlur}
-                                className="description-input"
-                            />
-                            <label className="description-label">{label}</label>
-                        </div>
+                        <label className="description-label">{label}</label>
+                    </div>
 
                 </div>
 
-
-
-
             </div>
 
-
         </div>
-    )
+    );
 }
 
-export default AddOrEditProject
+export default AddOrEditProject;
