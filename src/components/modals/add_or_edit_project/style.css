@@ -63,11 +63,19 @@
     display: flex;
     width: 389px;
     height: 304px;
-    
     justify-content: center;
     align-items: center;
     border-radius: var(--borderRadius, 4px);
     background: var(--color-neutral-70);
+}
+
+.selected-img {
+    display: flex;
+    width: 389px;
+    height: 304px;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius, 4px);
 }
 
 .add-img-button {
@@ -83,6 +91,12 @@
     border: none;
     cursor: pointer;
     border-radius: var(--borderRadius, 4px);
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bottom-buttons {
@@ -149,9 +163,10 @@
         width: 100%;
     }
 
-    .add-project-img {
+    .add-project-img,
+    .selected-img {
         width: 100%;
     }
-
+    
 }
 
