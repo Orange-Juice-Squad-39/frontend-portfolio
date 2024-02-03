@@ -1,4 +1,4 @@
-.first-project-container {
+/* .first-project-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,22 @@
     background: none;
     border: none;
     cursor: pointer;
+} */
+
+
+.first-project-button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px;
+    background: var(--Neutral-Colors-Neutral-70, #E6E9F2);
+    border-radius: var(--borderRadius, 0.25rem);
+    border: 0px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+.first-project-button:hover{
+    filter: brightness(0.9);
 }
 
 .empty-img {

@@ -83,6 +83,11 @@
     border: none;
     cursor: pointer;
     border-radius: var(--borderRadius, 4px);
+    transition: all 200ms linear;
+}
+
+.add-img-button:hover{
+    filter: brightness(0.9);
 }
 
 .bottom-buttons {

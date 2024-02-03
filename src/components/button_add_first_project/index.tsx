@@ -7,7 +7,7 @@ interface firstProjectPops {
 
 function ButtonFirstProject({ onClick }: firstProjectPops ) {
   return (
-    <div className="first-project-container">
+
       <button className="first-project-button" onClick={onClick}>
         <img src={emptyImg.src} className="empty-img"/>
         <div className="first-project-text">
@@ -17,8 +17,10 @@ function ButtonFirstProject({ onClick }: firstProjectPops ) {
           <text className="body2">Compartilhe seu talento com milhares de pessoas</text>
         </div>
       </button>
-    </div>
+
   )
 }
+
+
 
 export default ButtonFirstProject
