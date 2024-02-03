@@ -19,7 +19,7 @@ function Login() {
         <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
           <Input label="" type="email" name="email" placeholder="Email address"/>
-          <PasswordInput placeholder="Password" onPasswordChange={() => {}}/>
+          <PasswordInput placeholder="Password"/>
           <div className="login-submit">
             <LargeButton text="ENTRAR"/>
           </div>

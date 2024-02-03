@@ -10,13 +10,16 @@ export default function Home() {
 
   return (
     <main>
-      {logged &&(
+      {/* {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )}
+      )} */}
+
+
+      <ViewPost/>
     </main>
   );
 }
