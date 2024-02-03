@@ -10,33 +10,41 @@ import "./style.css";
 import { useRouter } from "next/navigation";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({ email: "", password: "" });
+
+  const handleInputChange = (value: string) => {
+    setFormData({ ...formData, email: value });
+  };
+
+  const handlePasswordChange = (value: string) => {
+    setFormData({ ...formData, password: value });
+  };  
+
   const router = useRouter()
 
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${apiConfig.baseURL}/login`, {
-        email,
-        password,
+        username: formData.email,
+        password: formData.password,
       });
-      const accessToken = response.data.accessToken;
-      console.log('Test:', response);
-
-      localStorage.setItem("accessToken", accessToken);
-
-      if (response.status === 201) {
+  
+      if (response.data.accessToken) {
+        localStorage.setItem("accessToken", response.data.accessToken);
         router.push('/');
-        console.log("Login feito!");
       }
     } catch (error: any) {
-      if (error.response && error.response.status === 401) {
-        alert("Email e/ou senha incorretos");
+      if (error.response) {
+        if (error.response.status === 401) {
+          alert("Email e/ou senha incorretos");
+        } else {
+          console.error(`Erro ao fazer login - Status: ${error.response.status}`, error.message);
+        }
       } else {
         console.error("Erro ao fazer login", error.message);
       }
     }
-  };
+  };   
 
   return (
     <div className="login-container">
@@ -48,8 +56,15 @@ function Login() {
         <GoogleButton />
         <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
-          <Input label="" type="email" name="email" placeholder="Email address"/>
-          <PasswordInput placeholder="Password"/>
+          <Input 
+            label="" 
+            type="email" 
+            name="email" 
+            placeholder="Email address"
+            onChange={handleInputChange}
+          />
+          {/* <PasswordInput placeholder="Password" onPasswordChange={() => {}}/> */}
+          <PasswordInput placeholder="Password" onPasswordChange={handlePasswordChange} />
           <div className="login-submit">
             <LargeButton text="ENTRAR" onClick={handleLogin}/>
           </div>
