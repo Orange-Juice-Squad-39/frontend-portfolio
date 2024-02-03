@@ -1,6 +1,7 @@
 import imgLogin from "@/assets/images/img_login.png";
 import GoogleButton from "@/components/google_button";
 import Input from "@/components/input";
+import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
 import { useState } from "react";
 import axios from "axios";
@@ -47,33 +48,15 @@ function Login() {
         <GoogleButton />
         <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
-          <Input
-            label=""
-            type="email"
-            name="email"
-            placeholder="Email address"
-            value={email}
-            onChange={(e: any) => setEmail(e.target.value)}
-          />
-          <Input
-            label=""
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e: any) => setPassword(e.target.value)}
-          />
+          <Input label="" type="email" name="email" placeholder="Email address"/>
+          <PasswordInput placeholder="Password"/>
           <div className="login-submit">
             <LargeButton text="ENTRAR" onClick={handleLogin}/>
           </div>
 
           <div className="link-container">
-            <a href="/cadastro" className="subtitle1">
-              Cadastre-se
-            </a>
-            <a href="/recuperacao" className="subtitle1">
-              Esqueceu a senha?
-            </a>
+            <a href="/cadastro" className="subtitle1">Cadastre-se</a>
+            <a href="/senha_envio" className="subtitle1">Esqueceu a senha?</a>
           </div>
         </div>
       </div>

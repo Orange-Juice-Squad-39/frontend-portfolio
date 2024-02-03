@@ -1,0 +1,195 @@
+.add-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.add-project-container {
+    display: flex;
+    flex-direction: column;
+    width: 890px;
+    height: 522px;
+    flex-shrink: 0;
+    border-radius: var(--none, 0px);
+    background: #FEFEFE;
+    padding: 24px 32px;
+    justify-content: center;
+}
+
+.add-project-h5 {
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+    margin-bottom: 24px;
+}
+
+.add-project-content {
+    display: grid;
+    grid-template-areas: 
+        "A B"
+    ;
+    height: 336px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--3, 24px);
+    flex-shrink: 0;
+}
+
+.add-project-content-left {
+    grid-area: A;
+    display: flex;
+    flex-direction: column;
+    width: 389px;
+    height: 336px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--2, 0px);
+}
+
+.content-left-text {
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+    width: 389px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.add-project-img {
+    display: flex;
+    width: 389px;
+    height: 304px;
+    padding: var(--none, 91px) var(--none, 59px) var(--none, 91px) var(--none, 60px);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius, 4px);
+    background: var(--Neutral-Colors-Neutral-70, #E6E9F2);
+    margin-top: 16px;
+}
+
+.add-img-button {
+    display: flex;
+    width: 270px;
+    height: 122px;
+    padding: var(--none, 16px) var(--none, 0px);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-content {
+    display: flex;
+    padding: var(--none, 0px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--2, 16px);
+}
+
+.empty-img {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
+.button-text {
+    width: 100%;
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+    opacity: 0.6;
+    text-align: left;
+}
+
+
+.add-project-content-right {
+    grid-area: B;
+    display: flex;
+    width: 413px;
+    height: 336px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-inputs {
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    display: flex;
+    height: auto;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--none, 0px);
+    align-self: stretch;
+    border-radius: var(--borderRadius, 4px);
+    border: var(--none, 1px) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
+    background: none;
+}
+
+.description-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px 24px;
+    border-radius: var(--borderRadius, 4px);
+    border: var(--none, 1px) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
+    background: none;
+    color: var(--Neutral-Colors-Neutral-120, #303133);
+}
+
+.add-project-bottom-container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--3, 16px);
+    margin-top: 16px;
+}
+
+.view-post-button {
+    color: var(--Neutral-Colors-Neutral-110, #515255);
+}
+
+.bottom-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--2, 16px);
+}
+
+.description-container {
+    position: relative;
+}
+
+.description-label {
+    position: absolute;
+    left: 1px;
+    margin-top: -9px;
+    margin-left: 0.625rem;
+    padding-left: 0.1875rem;
+    padding-right: 0.1875rem;
+    background-color: #fff;
+}
+
+.description-input:focus {
+    outline: none; /* Remove a borda interna azul quando o textarea está em foco */
+}
+
+@media (min-width: 500px) and (max-width: 920px){
+    .add-project {
+        height: 550px;
+    }
+
+    .add-project-container {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 1080px;
+        padding: 24px 32px;
+    }
+
+    .add-project-content {
+        display: grid;
+        grid-template-areas: 
+            "B"
+            "A"
+        ;
+    }
+
+}

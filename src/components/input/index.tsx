@@ -1,7 +1,5 @@
 "use client"
 import { useState } from "react";
-import eye from "@/assets/images/eye.svg";
-import invisibleEye from "@/assets/images/invisibleEye.svg";
 import "./style.css";
 
 interface inputProps {
@@ -13,11 +11,9 @@ interface inputProps {
     onChange: (value: string) => void;
 }
 
-function Input({ label, type, name, placeholder, value, onChange }: inputProps) {
-  const [showPassword, setShowPassword] = useState(false);
+function Input({ label, type, name, placeholder }: inputProps) {
   const [lbl, setLbl] = useState(label);
   const [ph, setPh] = useState(placeholder);
-  const inputType = showPassword ? "text" : type;
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +44,7 @@ function Input({ label, type, name, placeholder, value, onChange }: inputProps) 
 
         <div className="input-content">
           <input 
-            type={inputType} 
+            type={type} 
             name={name} 
             placeholder={ph}
             value={inputValue}
@@ -57,20 +53,6 @@ function Input({ label, type, name, placeholder, value, onChange }: inputProps) 
             onBlur={handleBlur}
             className="input-content input-text"
           />
-
-          {type === "password" && (
-            <button
-              className="password-toggle"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword && (
-                <img src={eye.src} className="eye-button"/>
-              )}
-              {!showPassword && (
-                <img src={invisibleEye.src} className="eye-button"/>
-              )}
-            </button>
-          )}
         </div>
     </div>
   )
