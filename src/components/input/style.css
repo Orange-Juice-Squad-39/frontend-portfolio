@@ -37,6 +37,13 @@ textarea:focus-within{
     border: var(--none, 0.0625rem) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23)); 
 }
 
+.input-container:focus-within .label-container label,
+.password-input-container:focus-within .label-container label,
+.tags-input-container:focus-within .tags-label-container label,
+textarea:focus-within+label.description-label{
+    color: var(--color-info-100);
+}
+
 
 .input-content {
     display: grid;
