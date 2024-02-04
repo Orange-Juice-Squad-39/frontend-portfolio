@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Login from "./login/page";
 import Descobrir from "./descobrir/page";
+
 // import styles from "./page.module.css";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       ) : (
         <Login />
       )}
+
     </main>
   );
 }

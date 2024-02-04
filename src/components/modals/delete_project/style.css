@@ -34,3 +34,39 @@
     align-items: flex-start;
     gap: var(--2, 16px);
 }
+
+
+@media (max-width: 450px){
+    .delete-project-container {
+        width: 90vw;
+    }
+
+    .delete-project-h5,
+    .delete-project-text,
+    .delete-project-buttons {
+        width: 100%;
+    }
+
+    .delete-project-buttons {
+        flex-direction: column;
+    }
+
+    .delete-project-buttons button{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 275px){
+    .delete-project-h5{
+        font-size: 18px;
+    }
+
+    .delete-project-text {
+        font-size: 14px;
+    }
+
+    .delete-project-text{
+
+    }
+}

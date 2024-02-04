@@ -40,6 +40,7 @@ function Cadastro() {
     setFormData({ ...formData, password: value });
   };
 
+
   const handleRegisterUser = async () => {
     if (formData.password === confirmPassword) {
       setSuccess(true);

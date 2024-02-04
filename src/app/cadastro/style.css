@@ -5,6 +5,7 @@
     overflow-y: hidden;
 }
 
+
 .left-components{
     height: 100vh;
 }
@@ -39,6 +40,7 @@ h3 {
 .surname-input {
     width: calc(50% - 0.5rem);
 }
+
 
 @media (min-width: 580px) and (max-width: 1250px) {
     .cadastro-container {
