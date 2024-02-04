@@ -7,7 +7,7 @@ import postImg from "@/assets/images/Image.png";
 import "./style.css"; 
 
 interface viewPostProps {
-  closeModal: () => void;
+  closeModal: () => void; 
 }
 
 function ViewPost({ closeModal }: viewPostProps) {
