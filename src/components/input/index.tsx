@@ -3,19 +3,21 @@ import { useState } from "react";
 import "./style.css";
 
 interface inputProps {
-    label: string;
-    type: string;
-    name: string;
-    placeholder: string;
+  label: string;
+  type: string;
+  name: string;
+  placeholder: string;
+  onChange: (value: string) => void;
 }
 
-function Input({ label, type, name, placeholder }: inputProps) {
+function Input({ label, type, name, placeholder, onChange }: inputProps) {
   const [lbl, setLbl] = useState(label);
   const [ph, setPh] = useState(placeholder);
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
+    onChange(e.target.value);
   };
 
   const handleFocus = () => {

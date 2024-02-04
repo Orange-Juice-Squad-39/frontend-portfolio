@@ -92,6 +92,7 @@ function AddOrEditProject({ adding, onCancel }: addEditProps) {
                     </div> */}
 
                 <div className="add-project-img">
+
                     <label className="add-img-button">
                         <div className="button-content">
                             <div className="img-container">
