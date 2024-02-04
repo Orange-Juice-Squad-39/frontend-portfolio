@@ -28,6 +28,7 @@ function Portfolio() {
           <div className="portfolio-card">
             <CardPerfil/>
           </div>
+          
           <div className="portfolio-search">
             <h6 className="portfolio-h6">Meus projetos</h6>
             <div className="portfolio-input">

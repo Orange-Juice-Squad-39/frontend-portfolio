@@ -12,9 +12,9 @@
     display: grid;
     gap: 10px;
 	grid-template-areas: 
-		"A A A A A"
-		"B . . . ."
-		"C . . . ."
+		"A"
+		"B"
+		"C"
 	;
     grid-auto-rows: 25%;
 }
@@ -118,5 +118,13 @@
         gap: 30px;
     }
 
+
+}
+
+
+@media (max-width: 330px){
+    .first-project-button {
+        margin-top: 30px;
+    }
 
 }
