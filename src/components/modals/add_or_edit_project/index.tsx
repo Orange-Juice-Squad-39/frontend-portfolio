@@ -5,7 +5,6 @@ import SmallButton from "@/components/small_button";
 import Input from "@/components/input";
 import TagsInput from "@/components/tags_input";
 import "./style.css"; 
-import ViewPost from "../view_post";
 
 interface addEditProps {
     adding?: boolean;

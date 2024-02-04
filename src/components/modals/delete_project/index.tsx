@@ -1,7 +1,12 @@
 import SmallButton from "@/components/small_button";
 import "./style.css";
 
-function DeleteProject() {
+interface deleteProjProps {
+  exclusion: () => void;
+  cancel: () => void;
+}
+
+function DeleteProject({ exclusion, cancel }: deleteProjProps) {
   return (
     <div className="delete-project">
         <div className="delete-project-container">
@@ -10,8 +15,8 @@ function DeleteProject() {
                 Se você prosseguir irá excluir o projeto do seu portfólio
             </text>
             <div className="delete-project-buttons">
-                <SmallButton text="EXCLUIR" disabled={false}/>
-                <SmallButton text="CANCELAR" disabled={true}/>
+                <SmallButton text="EXCLUIR" disabled={false} onClick={exclusion}/>
+                <SmallButton text="CANCELAR" disabled={false} onClick={cancel}/>
             </div>
         </div>
     </div>
