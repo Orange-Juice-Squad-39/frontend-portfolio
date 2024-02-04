@@ -6,7 +6,11 @@ import Tag from "@/components/tag";
 import postImg from "@/assets/images/Image.png";
 import "./style.css"; 
 
-function ViewPost() {
+interface viewPostProps {
+  closeModal: () => void;
+}
+
+function ViewPost({ closeModal }: viewPostProps) {
   const [avatar, setAvatar] = useState(userImg);
   const [userName, setUserName] = useState('Camila Soares');
   const [date, setDate] = useState('12/12');
@@ -14,7 +18,7 @@ function ViewPost() {
 
   return (
     <div className="view-post-container">
-      <button className="close-button">
+      <button className="close-button" onClick={closeModal}>
         <img src={close.src}/>
       </button>
 

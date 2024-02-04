@@ -9,9 +9,11 @@ import project from "@/assets/images/img_projeto.png";
 import perfil from "@/assets/images/perfil-image.png"; 
 import "./style.css";
 import AddOrEditProject from '@/components/modals/add_or_edit_project';
+import ViewPost from '@/components/modals/view_post';
 
 function Portfolio() { 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isViewPostModalOpen, setIsViewPostModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -19,6 +21,16 @@ function Portfolio() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const openViewPostModal = () => {
+    setIsViewPostModalOpen(true);
+    closeModal();
+  };
+
+  const closeViewPostModal = () => {
+    setIsViewPostModalOpen(false);
+    openModal();
   };
 
   return (
@@ -32,7 +44,13 @@ function Portfolio() {
           <div className="portfolio-search">
             <h6 className="portfolio-h6">Meus projetos</h6>
             <div className="portfolio-input">
-              <Input label="" type="text" name="tags" placeholder="Buscar tags"/>
+              <Input 
+                label="" 
+                type="text" 
+                name="tags" 
+                placeholder="Buscar tags" 
+                onChange={() => {}}
+              />
             </div>
           </div>
           <div className="portfolio-projects">
@@ -42,7 +60,18 @@ function Portfolio() {
             {isModalOpen && (
               <>
                 <div className="overlay" onClick={closeModal}></div>
-                <AddOrEditProject adding={true} onCancel={closeModal} />
+                <AddOrEditProject 
+                  adding={true} 
+                  onCancel={closeModal} 
+                  openViewPost={openViewPostModal}
+                />
+              </>
+            )}
+
+            {isViewPostModalOpen && (
+              <>
+                <div className="overlay" onClick={closeViewPostModal}></div>
+                <ViewPost closeModal={closeViewPostModal}/>
               </>
             )}
             

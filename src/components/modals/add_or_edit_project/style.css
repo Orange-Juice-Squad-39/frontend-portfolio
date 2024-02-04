@@ -47,6 +47,13 @@
     grid-area: C;
 }
 
+.view-post-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
 .add-project-h5,
 .content-left-text,
 .view-post-button {
