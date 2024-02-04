@@ -31,9 +31,9 @@ function Login() {
   
       if (response.data.accessToken) {
         localStorage.setItem("accessToken", response.data.accessToken);
-        localStorage.setItem("logged", "true");
+        //localStorage.setItem("logged", "true");
+        console.log(response.data.accessToken);
         router.refresh();
-        console.log('login feito!');
       }
     } catch (error: any) {
       if (error.response) {
