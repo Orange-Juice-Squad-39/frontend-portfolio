@@ -15,7 +15,7 @@ function Header() {
             <a href="/portfolio">
                 <h6>Meus projetos</h6>
             </a>
-            <a href="/descobrir">
+            <a href="/">
                 <h6>Descobrir</h6>
             </a>
         </div>

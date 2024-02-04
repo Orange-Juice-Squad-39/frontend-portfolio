@@ -31,7 +31,9 @@ function Login() {
   
       if (response.data.accessToken) {
         localStorage.setItem("accessToken", response.data.accessToken);
-        router.push('/');
+        localStorage.setItem("logged", "true");
+        router.refresh();
+        console.log('login feito!');
       }
     } catch (error: any) {
       if (error.response) {
@@ -63,7 +65,6 @@ function Login() {
             placeholder="Email address"
             onChange={handleInputChange}
           />
-          {/* <PasswordInput placeholder="Password" onPasswordChange={() => {}}/> */}
           <PasswordInput placeholder="Password" onPasswordChange={handlePasswordChange} />
           <div className="login-submit">
             <LargeButton text="ENTRAR" onClick={handleLogin}/>
