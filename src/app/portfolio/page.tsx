@@ -42,7 +42,7 @@ function Portfolio() {
             {isModalOpen && (
               <>
                 <div className="overlay" onClick={closeModal}></div>
-                <AddOrEditProject adding={true} closeModal={closeModal} />
+                <AddOrEditProject adding={true} onCancel={closeModal} />
               </>
             )}
             

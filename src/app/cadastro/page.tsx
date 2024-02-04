@@ -1,74 +1,139 @@
-"use client"
+"use client";
 import { useState } from "react";
-import imgCadastro from "@/assets/images/img_cadastro.png"
+import imgCadastro from "@/assets/images/img_cadastro.png";
 import RegistrationAlert from "@/components/registration_alert";
 import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
 import "./style.css";
-
+import axios from "axios";
+import apiConfig from "@/utils/api.config";
+import { useRouter } from "next/navigation";
 
 function Cadastro() {
-    const [success, setSuccess] = useState(false);
-    const [error, setError] = useState(false);
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
 
-    const handleRegister = () => {
-        // Verifique se a senha e a confirmação da senha são iguais
-        if (password === confirmPassword) {
-            // Lógica de registro bem-sucedida
-            setSuccess(true);
-            setError(false);
-        } else {
-            // Lógica de erro ao confirmar a senha
-            setSuccess(false);
-            setError(true);
+  const router = useRouter();
+
+  const handleNameChange = (value: string) => {
+    setFormData({ ...formData, name: value });
+  };
+
+  const handleLastNameChange = (value: string) => {
+    setFormData({ ...formData, lastName: value });
+  };
+
+  const handleEmailChange = (value: string) => {
+    setFormData({ ...formData, email: value });
+  };
+
+  const handlePasswordChange = (value: string) => {
+    setFormData({ ...formData, password: value });
+  };
+
+
+  const handleRegisterUser = async () => {
+    if (formData.password === confirmPassword) {
+      setSuccess(true);
+      setError(false);
+      try {
+        const response = await axios.post(
+          `${apiConfig.baseURL}/users/register-user`,
+          {
+            name: formData.name,
+            lastName: formData.lastName,
+            email: formData.email,
+            password: formData.password,
+          }
+        );
+
+        if (response.status === 201) {
+          router.push("/");
         }
-    };
+      } catch (err: any) {
+        setSuccess(false);
+        setError(true);
+        if (err.response) {
+          if (err.response.status === 409) {
+            alert(err.response.message);
+          } else {
+            console.error(
+              `Erro ao realizar cadastro - Status: ${err.response.status}`,
+              err.message
+            );
+          }
+        } else {
+          console.error("Erro ao realizar cadastro", err.message);
+        }
+      }
+    } else {
+      setSuccess(false);
+      setError(true);
+    }
+  };
 
-    // console.log(password === confirmPassword);
+  return (
+    <div className="cadastro-container">
+      <div className="left-components">
+        <img src={imgCadastro.src} />
+      </div>
+      <div className="right-components">
+        {success && <RegistrationAlert text={"Cadastro feito com sucesso"} />}
 
-    return (
-        <div className="cadastro-container">
-        <div className="left-components">
-            <img src={imgCadastro.src}/>
-        </div>
-        <div className="right-components">
-            {success && (
-                <RegistrationError text="Cadastro feito com sucesso"/>
-            )}
-
-            {error && (
-                <RegistrationAlert text="Erro no cadastro"/>
-            )}
-            <h3>Cadastre-se</h3>
-            <div className="internal-container">
-            <div className="name-container">
-                <div className="name-input">
-                    <Input label="" type="text" name="name" placeholder="Nome *"/>
-                </div>
-                <div className="surname-input">
-                    <Input label="" type="text" name="surname" placeholder="Sobrenome *"/>
-                </div>
+        {error && <RegistrationError text="Erro no cadastro" />}
+        <h3>Cadastre-se</h3>
+        <div className="internal-container">
+          <div className="name-container">
+            <div className="name-input">
+              <Input
+                label=""
+                type="text"
+                name="name"
+                placeholder="Nome *"
+                onChange={handleNameChange}
+              />
             </div>
-                <Input label="" type="email" name="email" placeholder="Email address"/>
-                <PasswordInput 
-                    placeholder="Password"
-                    onPasswordChange={(value) => setPassword(value)}
-                />
-                <PasswordInput 
-                    placeholder="Confirm password"
-                    onPasswordChange={(value) => setConfirmPassword(value)}
-                />
-                <LargeButton text="CADASTRAR" /*onClick={handleRegister}*/ /> 
+            <div className="surname-input">
+              <Input
+                label=""
+                type="text"
+                name="surname"
+                placeholder="Sobrenome *"
+                onChange={handleLastNameChange}
+              />
             </div>
+          </div>
+          <Input
+            label=""
+            type="email"
+            name="email"
+            placeholder="Email address"
+            onChange={handleEmailChange}
+          />
+          <PasswordInput
+            placeholder="Password"
+            onPasswordChange={handlePasswordChange}
+          />
+          <PasswordInput
+            placeholder="Confirm password"
+            onPasswordChange={(value) => {
+              setConfirmPassword(value);
+            }}
+          />
+          <LargeButton text="CADASTRAR" onClick={handleRegisterUser} />
         </div>
-        
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Cadastro
+export default Cadastro;
