@@ -4,6 +4,14 @@
     gap: 2.625rem;
 }
 
+.perfil-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 122px;
+    height: 122px;
+}
+
 .card-perfil-img {
     display: flex;
     width: 122px;
@@ -11,7 +19,31 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    cursor: pointer;
+    transition: all 200ms linear;
 }
+
+.card-perfil-hover{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: rgba(23, 23, 23, 0.5);
+    transition: all 200ms linear;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+.perfil-container:hover .card-perfil-img{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.perfil-container:hover .card-perfil-hover{
+    opacity: 1;
+}
+
 
 .card-info-container {
     display: flex;

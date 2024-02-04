@@ -84,7 +84,7 @@
 
 .selected-img {
     display: flex;
-    width: 389px;
+    width: 389px; 
     height: 304px;
     justify-content: center;
     align-items: center;
