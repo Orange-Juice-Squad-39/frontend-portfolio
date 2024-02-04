@@ -15,6 +15,11 @@
     flex-wrap: wrap;
     border-radius: var(--none, 0px);
     background: var(--Neutral-Colors-Neutral-60, #FCFDFF);
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 .delete-project-h5 {
@@ -66,7 +71,7 @@
         font-size: 14px;
     }
 
-    .delete-project-text{
+    /* .delete-project-text{
 
-    }
+    } */
 }

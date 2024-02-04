@@ -13,9 +13,11 @@ interface cardProjProps {
     name: string;
     data: string;
     portfolio: boolean
+    edit: () => void;
+    exclusion: () => void;
 }
 
-function CardProject({ projImg, perfilImg, name, data, portfolio}: cardProjProps) {
+function CardProject({ projImg, perfilImg, name, data, portfolio, edit, exclusion}: cardProjProps) {
     const [projectImg, setProjectImg] = useState(projImg !== undefined ? projImg : pjtImg);
     const [userImg, setUserImg] = useState(perfilImg !== undefined ? perfilImg : pflImg);
     const [userName, setUserName] = useState(name !== ''? name : 'Camila Soares');
@@ -25,7 +27,7 @@ function CardProject({ projImg, perfilImg, name, data, portfolio}: cardProjProps
         <div className="card-project-container">
             {portfolio && (
                 <div className="menu-button-container">
-                    <MenuButton />
+                    <MenuButton edit={edit} exclusion={exclusion}/>
                 </div>
             )}
             <div className="project-img">

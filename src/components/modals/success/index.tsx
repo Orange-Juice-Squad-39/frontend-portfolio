@@ -3,9 +3,10 @@ import "./style.css";
 
 interface sucessProps {
   text: string;
+  onClick: () => void;
 }
 
-function SucessModal({ text }: sucessProps) {
+function SuccessModal({ text, onClick }: sucessProps) {
   return (
     <div className="sucess-modal">
       <div className="sucess-container">
@@ -14,11 +15,11 @@ function SucessModal({ text }: sucessProps) {
           <div className="img-container">
             <img src={sucessImg.src} className="sucess-img"/>
           </div>
-          <button className="sucess-button">voltar para projetos</button>
+          <button className="sucess-button" onClick={onClick}>voltar para projetos</button>
         </div>
       </div>
     </div>
   )
 }
 
-export default SucessModal
+export default SuccessModal
