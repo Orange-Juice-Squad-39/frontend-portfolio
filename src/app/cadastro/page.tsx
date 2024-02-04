@@ -14,6 +14,7 @@ function Cadastro() {
     const [error, setError] = useState(false);
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    
 
     const handleRegister = () => {
         // Verifique se a senha e a confirmação da senha são iguais

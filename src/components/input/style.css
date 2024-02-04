@@ -8,8 +8,35 @@
     margin-bottom: 1rem;
     gap: var(--none, 0px);
     border-radius: var(--borderRadius, 0.25rem);
-    border: var(--none, 0.0625rem) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23));
+    border: var(--none, 0.0625rem) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23)); 
 }
+
+.input-container,
+.password-input-container{
+    transition: all 200ms linear;
+}
+
+.input-container:hover,
+.password-input-container:hover,
+.tags-input-container:hover,
+textarea:hover{
+    border-color: #000;
+}
+
+
+.input-container:focus-within,
+.password-input-container:focus-within,
+.tags-input-container:focus-within,
+textarea:focus-within{
+    outline: none;
+    border-color: var(--color-info-100);
+}
+
+.input-container:enabled,
+.password-input-container:enabled{
+    border: var(--none, 0.0625rem) solid var(--components-input-outlined-enabledBorder, rgba(0, 0, 0, 0.23)); 
+}
+
 
 .input-content {
     display: grid;

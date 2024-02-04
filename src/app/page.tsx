@@ -11,15 +11,13 @@ export default function Home() {
 
   return (
     <main>
-      {/* {logged &&(
+      {logged &&(
         <Descobrir/>
       )}
 
       {!logged &&(
         <Login/>
-      )} */}
-
-      <SucessModal text={"Loucura"}/>
+      )}
 
     </main>
   );
