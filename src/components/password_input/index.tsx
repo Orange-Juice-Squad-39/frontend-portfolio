@@ -7,16 +7,19 @@ import "./style.css";
 interface inputProps {
   placeholder: string;
   onPasswordChange: (value: string) => void;
+  isRegister?: boolean
 }
 
-function PasswordInput({ placeholder, onPasswordChange }: inputProps) {
+function PasswordInput({ placeholder, onPasswordChange, isRegister }: inputProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [label, setLabel] = useState('');
   const [ph, setPh] = useState(placeholder);
+  const inputType = showPassword ? 'text' : 'password';
   const [inputValue, setInputValue] = useState("");
-  const [borderColor, setBorderColor] = useState('rgba(0, 0, 0, 0.23)'); 
+  const [borderColor, setBorderColor] = useState('rgba(0, 0, 0, 0.23)');
+  const [labeColor, setLabelColor] = useState('rgb(81, 82, 85)'); 
 
-  const validatePassword = (input) => {
+  const validatePassword = (input: string) => {
     const minLength = 8;
     const hasUpperCase = /[A-Z]/.test(input);
     const hasLowerCase = /[a-z]/.test(input);
@@ -37,51 +40,71 @@ function PasswordInput({ placeholder, onPasswordChange }: inputProps) {
     setInputValue(newPassword);
     onPasswordChange(newPassword);
 
-    if (newPassword === "") {
-      setPh(placeholder);
-      setBorderColor('rgba(0, 0, 0, 0.23)'); 
-    } else {
-      const isValid = validatePassword(newPassword);
-      setBorderColor(isValid ? '#2E7D32' : '#D32F2F'); 
+    if (isRegister) {
+      if (e.target.value === "") {
+        setBorderColor('rgba(0, 0, 0, 0.23)');
+        setLabelColor('rgb(81, 82, 85)');
+      } else {
+        const isValid = validatePassword(newPassword);
+        setBorderColor(isValid ? '#2E7D32' : '#D32F2F');
+        setLabelColor(isValid ? '#2E7D32' : '#D32F2F'); 
+      }
     }
   };
 
   const handleFocus = () => {
     if (inputValue === "") {
-      setBorderColor('rgba(0, 0, 0, 0.23)'); 
+      setLabel(ph);
+      setPh("");
+    }
+
+    if (inputValue === "") {
+      setBorderColor('rgba(0, 0, 0, 0.23)');
+      setLabelColor('rgb(81, 82, 85)');
+    }
+  };
+
+  const handleBlur = () => {
+    if (inputValue === "") {
+      setPh(label);
+      setLabel("");
     }
   };
 
   return (
     <div className="password-input-container" style={{ borderColor }}>
-      <div className="password-label-container">
-        {ph && <label style={{ color: borderColor }}>{ph}</label>}
-      </div>
+        {label !== "" && (
+          <div className="password-label-container" style={{ color: labeColor }}>
+            <label style={{ color: labeColor }}>{label}</label>
+          </div>
+        )}
 
-      <div className="password-input-content">
-        <input
-          type={showPassword ? 'text' : 'password'}
-          name='password'
-          placeholder={ph}
-          value={inputValue}
-          onChange={handleInputChange}
-          onFocus={handleFocus}
-          className="password-input-content password-input-text"
-        />
+        <div className="password-input-content">
+            <input 
+                type={inputType}
+                name='password'
+                placeholder={ph}
+                value={inputValue}
+                onChange={handleInputChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                className="password-input-content password-input-text"
+            />
 
-        <button
-          className="password-toggle"
-          onClick={() => setShowPassword(!showPassword)}
-        >
-          {showPassword ? (
-            <img src={eye.src} className="eye-button" alt="Show Password" />
-          ) : (
-            <img src={invisibleEye.src} className="eye-button" alt="Hide Password" />
-          )}
-        </button>
-      </div>
+            <button
+                className="password-toggle"
+                onClick={() => setShowPassword(!showPassword)}
+            >
+                {showPassword && (
+                    <img src={eye.src} className="eye-button"/>
+                )}
+                {!showPassword && (
+                    <img src={invisibleEye.src} className="eye-button"/>
+                )}
+            </button>
+        </div>
     </div>
-  );
+  )
 }
 
-export default PasswordInput;
+export default PasswordInput

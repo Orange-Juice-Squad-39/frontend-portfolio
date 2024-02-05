@@ -122,12 +122,14 @@ function Cadastro() {
           <PasswordInput
             placeholder="Password"
             onPasswordChange={handlePasswordChange}
+            isRegister={true}
           />
           <PasswordInput
             placeholder="Confirm password"
             onPasswordChange={(value) => {
               setConfirmPassword(value);
             }}
+            isRegister={true}
           />
           <LargeButton text="CADASTRAR" onClick={handleRegisterUser} />
         </div>

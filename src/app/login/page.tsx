@@ -3,7 +3,7 @@ import GoogleButton from "@/components/google_button";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import "./style.css";
