@@ -8,6 +8,28 @@
     background: #113;    
 }
 
+button{
+    cursor: pointer;
+}
+
+.exit-button-content-desk{
+    background: none;
+    height: 73px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.exit-icon-desk{
+    transition: all 200ms linear;
+}
+
+.exit-button-content-desk:hover .exit-icon-desk{
+    filter: brightness(0.6);
+}
+
 .menu-burguer{
     display: none;
     align-items: center;
@@ -87,5 +109,9 @@ h6 {
         display: flex;
         background: none;
         border: none;
+    }
+
+    .exit-button-content-desk{
+        display: none;
     }
 }

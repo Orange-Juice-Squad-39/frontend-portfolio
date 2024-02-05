@@ -2,6 +2,7 @@ import logoOrange from "@/assets/images/logo-orange.png";
 import perfilImg from "@/assets/images/perfil-image.png";
 import notificationIcon from "@/assets/images/NotificationsIcon.svg";
 import MenuMobileButton from "../menu_mobile_button";
+import exitIconDesk from "@/assets/images/LogoutFilledDesk.svg";
 import "./style.css";
 
 function Header() {
@@ -21,6 +22,9 @@ function Header() {
         </div>
         
         <div className="header-right-container">
+            <button className="exit-button-content-desk">
+                <img src={exitIconDesk.src} className="exit-icon-desk"/>
+            </button>
             <button className="header-button">
                 <img src={perfilImg.src} className="header-perfil-img"/>
             </button>
