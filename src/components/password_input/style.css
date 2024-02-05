@@ -1,4 +1,36 @@
+.tooltip {
+    box-sizing: border-box;
+    position: absolute;
+    top: -300%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    max-width: 240px;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    z-index: 1;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    vertical-align: middle;
+    border-right: 10px solid rgba(51, 51, 51, 0.9);
+    border-top: 10px solid rgba(51, 51, 51, 0.9);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    top: 100%;
+    left: 0px;
+}
+
+
 .password-input-container {
+    position: relative;
     display: flex;
     height: 56px;
     flex-direction: column;
@@ -26,9 +58,10 @@
 
 .password-input-text {
     color: var(--Neutral-Colors-Neutral-120, #303133);
-    font-feature-settings: 'clig' off, 'liga' off;
+    font-feature-settings: 'clig'off, 'liga'off;
     font-style: normal;
-    line-height: 1.5rem; /* 150% */
+    line-height: 1.5rem;
+    /* 150% */
     letter-spacing: 0.0094rem;
 }
 
@@ -45,7 +78,8 @@ label {
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1rem; /* 133.333% */
+    line-height: 1rem;
+    /* 133.333% */
     letter-spacing: 0.025rem;
 }
 
@@ -60,16 +94,16 @@ label {
     border: none;
 }
 
-@media (max-width: 1250px){
-    .password-input-content button{
+@media (max-width: 1250px) {
+    .password-input-content button {
         display: flex;
         justify-content: flex-end;
     }
 }
 
 
-@media (max-width: 255px){
-    .password-input-content input::placeholder{
+@media (max-width: 255px) {
+    .password-input-content input::placeholder {
         font-size: 10px;
     }
 }

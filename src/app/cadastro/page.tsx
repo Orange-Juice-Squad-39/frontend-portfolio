@@ -6,10 +6,11 @@ import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
-import "./style.css";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import { useRouter } from "next/navigation";
+import validatePassword from "@/utils/globalFunctions";
+import "./style.css";
 
 function Cadastro() {
   const [success, setSuccess] = useState(false);
@@ -37,7 +38,11 @@ function Cadastro() {
   };
 
   const handlePasswordChange = (value: string) => {
-    setFormData({ ...formData, password: value });
+    const isValid = validatePassword(value);
+
+    if (isValid) {
+      setFormData({ ...formData, password: value });
+    }
   };
 
 
@@ -47,7 +52,7 @@ function Cadastro() {
       setError(false);
       try {
         const response = await axios.post(
-          `${apiConfig.baseURL}/users/register-user`,
+          `${apiConfig.baseURL}/users/registeruser`,
           {
             name: formData.name,
             lastName: formData.lastName,
@@ -122,12 +127,14 @@ function Cadastro() {
           <PasswordInput
             placeholder="Password"
             onPasswordChange={handlePasswordChange}
+            isRegister={true}
           />
           <PasswordInput
             placeholder="Confirm password"
             onPasswordChange={(value) => {
               setConfirmPassword(value);
             }}
+            isRegister={true}
           />
           <LargeButton text="CADASTRAR" onClick={handleRegisterUser} />
         </div>
