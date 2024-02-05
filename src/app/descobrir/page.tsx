@@ -22,6 +22,8 @@ interface Project {
 
 function Descobrir() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [projectsSearch, setProjectsSearch] = useState<Project[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const getProjectsByDiscovery = async () => {
@@ -37,8 +39,8 @@ function Descobrir() {
         setProjects(response.data);
         console.log(projects);
 
-      } catch (err) {
-        console.error('Erro ao obter projetos:', err);
+      } catch (error) {
+        console.error('Erro ao obter projetos:', error);
 
       }
     };
@@ -46,6 +48,21 @@ function Descobrir() {
     getProjectsByDiscovery();
 
   }, []);
+
+  const handleSearch = async (value: string) => {
+    setSearch(value);
+
+    try {
+      const response = await axios.get(`${apiConfig.baseURL}/projects/search/${search}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+      });
+      setProjectsSearch(response.data);
+    } catch (error) {
+      console.error('Erro ao pesquisar projetos');
+    }
+  };
 
   return (
     <div className="descobrir-container">
@@ -57,7 +74,13 @@ function Descobrir() {
           
           <div className="descobrir-search">
             <div className="descobrir-input">
-            <Input label="Buscar tags" type="email" name="email" placeholder="" onChange={() => {}}/>
+            <Input 
+            label="Buscar tags" 
+            type="email" 
+            name="email" 
+            placeholder="" 
+            onChange={handleSearch}
+            onKeyPress={() => {}}/>
             </div>
           </div>
 

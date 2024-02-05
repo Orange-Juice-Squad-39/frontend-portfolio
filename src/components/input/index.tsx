@@ -1,5 +1,5 @@
-"use client"
-import { useState } from "react";
+"use client";
+import { KeyboardEventHandler, useState } from "react";
 import "./style.css";
 
 interface inputProps {
@@ -8,9 +8,17 @@ interface inputProps {
   name: string;
   placeholder: string;
   onChange: (value: string) => void;
+  onKeyPress?: () => void;
 }
 
-function Input({ label, type, name, placeholder, onChange }: inputProps) {
+function Input({
+  label,
+  type,
+  name,
+  placeholder,
+  onChange,
+  onKeyPress,
+}: inputProps) {
   const [lbl, setLbl] = useState(label);
   const [ph, setPh] = useState(placeholder);
   const [inputValue, setInputValue] = useState("");
@@ -34,28 +42,39 @@ function Input({ label, type, name, placeholder, onChange }: inputProps) {
     }
   };
 
+  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === 'Enter') {
+      onChange(inputValue);
+      setInputValue('');
+      if (onKeyPress) {
+        onKeyPress();
+      }
+    }
+  }
+  
   return (
     <div className="input-container">
-        {lbl !== "" && (
-          <div className="label-container">
-            <label>{lbl}</label>
-          </div>
-        )}
-
-        <div className="input-content">
-          <input 
-            type={type} 
-            name={name} 
-            placeholder={ph}
-            value={inputValue}
-            onChange={handleInputChange}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            className="input-content input-text"
-          />
+      {lbl !== "" && (
+        <div className="label-container">
+          <label>{lbl}</label>
         </div>
+      )}
+
+      <div className="input-content">
+        <input
+          type={type}
+          name={name}
+          placeholder={ph}
+          value={inputValue}
+          onChange={handleInputChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          onKeyDown={handleKeyDown}
+          className="input-content input-text"
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Input
+export default Input;
