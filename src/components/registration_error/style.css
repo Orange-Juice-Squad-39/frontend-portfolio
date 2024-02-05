@@ -1,3 +1,13 @@
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .registration-error {
     display: flex;
     width: 320px;
@@ -7,6 +17,11 @@
     background: var(--color-error-100);
     position: absolute;
     top: 4.8125rem;
+    animation-name: vanish;
+    animation-duration: 10s;
+    transition: all 10s linear;
+    animation-iteration-count: 1;
+    opacity: 0;
 }
 
 .registration-text {

@@ -6,11 +6,11 @@ import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
-import "./style.css";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import { useRouter } from "next/navigation";
 import validatePassword from "@/utils/globalFunctions";
+import "./style.css";
 
 function Cadastro() {
   const [success, setSuccess] = useState(false);
