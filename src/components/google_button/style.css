@@ -28,6 +28,11 @@
 
 .google-button:disabled {
     border-radius: var(--none, 0px);
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.google-button:disabled img {
+    filter: grayscale();
 }
 
 .google-button:focus {

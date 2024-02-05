@@ -1,7 +1,10 @@
 import exitIcon from "@/assets/images/LogoutFilled.svg";
 import "./style.css";
+import { useRouter } from "next/navigation";
 
 function MenuMobile() {
+    const router = useRouter();
+
   return (
     <div className='menu-mobile-container'>
         <div className='user-info-container'>
@@ -20,7 +23,13 @@ function MenuMobile() {
                 <div className="divider"></div>
             </div>
             <div className="exit-button-container">
-                <button className="exit-button-content">
+                <button 
+                    className="exit-button-content" 
+                    onClick={() => {
+                        localStorage.setItem("logged", "false");
+                        router.refresh();
+                    }}
+                >
                     <img src={exitIcon.src} className="exit-icon"/>
                     <text className="menu-mobile-item">Sair</text>
                 </button>
