@@ -51,6 +51,7 @@ function Cadastro() {
       setSuccess(true);
       setError(false);
       try {
+        console.log('Form: ', formData);
         const response = await axios.post(
           `${apiConfig.baseURL}/users/registeruser`,
           {
