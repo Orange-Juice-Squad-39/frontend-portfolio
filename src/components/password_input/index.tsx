@@ -2,6 +2,7 @@
 import { useState } from "react";
 import eye from "@/assets/images/eye.svg";
 import invisibleEye from "@/assets/images/invisibleEye.svg";
+import validatePassword from "@/utils/globalFunctions";
 import "./style.css";
 import { register } from "module";
 
@@ -19,22 +20,6 @@ function PasswordInput({ placeholder, onPasswordChange, isRegister }: inputProps
   const [inputValue, setInputValue] = useState("");
   const [borderColor, setBorderColor] = useState('rgba(0, 0, 0, 0.23)');
   const [labeColor, setLabelColor] = useState('rgb(81, 82, 85)'); 
-
-  const validatePassword = (input: string) => {
-    const minLength = 8;
-    const hasUpperCase = /[A-Z]/.test(input);
-    const hasLowerCase = /[a-z]/.test(input);
-    const hasNumber = /\d/.test(input);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(input);
-
-    return (
-      input.length >= minLength &&
-      hasUpperCase &&
-      hasLowerCase &&
-      hasNumber &&
-      hasSpecialChar
-    );
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = e.target.value;

@@ -10,6 +10,7 @@ import "./style.css";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import { useRouter } from "next/navigation";
+import validatePassword from "@/utils/globalFunctions";
 
 function Cadastro() {
   const [success, setSuccess] = useState(false);
@@ -37,7 +38,11 @@ function Cadastro() {
   };
 
   const handlePasswordChange = (value: string) => {
-    setFormData({ ...formData, password: value });
+    const isValid = validatePassword(value);
+
+    if (isValid) {
+      setFormData({ ...formData, password: value });
+    }
   };
 
 
@@ -47,7 +52,7 @@ function Cadastro() {
       setError(false);
       try {
         const response = await axios.post(
-          `${apiConfig.baseURL}/users/register-user`,
+          `${apiConfig.baseURL}/users/registeruser`,
           {
             name: formData.name,
             lastName: formData.lastName,
