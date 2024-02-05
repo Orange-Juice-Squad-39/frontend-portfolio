@@ -3,7 +3,7 @@ import GoogleButton from "@/components/google_button";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import "./style.css";
@@ -18,9 +18,9 @@ function Login() {
 
   const handlePasswordChange = (value: string) => {
     setFormData({ ...formData, password: value });
-  };  
+  };
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleLogin = async () => {
     try {
@@ -31,10 +31,10 @@ function Login() {
   
       if (response.data.accessToken) {
         localStorage.setItem("accessToken", response.data.accessToken);
-        //localStorage.setItem("logged", "true");
+        localStorage.setItem("logged", "true");
         console.log(response.data.accessToken);
-        // router.refresh();
-        router.push('/descobrir');
+        router.refresh();
+        // router.push('/descobrir');
       }
     } catch (error: any) {
       if (error.response) {
