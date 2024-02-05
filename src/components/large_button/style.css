@@ -1,6 +1,7 @@
 .large-button {
     display: flex;
-    width: 517px;
+    min-width: 517px;
+    width: 100%;
     height: 42px;
     padding: 0.5rem 1.375rem;
     flex-direction: column;
