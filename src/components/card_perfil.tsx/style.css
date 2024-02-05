@@ -1,7 +1,7 @@
 .card-perfil-container {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 2.625rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 .perfil-container{
@@ -75,10 +75,18 @@
 
 @media (min-width: 320px) and (max-width: 570px){
     .card-perfil-container {
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .button-content img,{
+        width: 100px;
+        height: 100px;
     }
 }
 
