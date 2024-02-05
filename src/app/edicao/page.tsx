@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import imgEdicao from "@/assets/images/img_cadastro.png";
+import imgEditar from "@/assets/images/img_cadastro.png";
 import RegistrationAlert from "@/components/registration_alert";
 import RegistrationError from "@/components/registration_error";
 import Input from "@/components/input";
@@ -84,7 +84,7 @@ function Edicao() {
   return (
     <div className="edicao-container">
       <div className="left-components">
-        <img src={imgEdicao.src} />
+        <img src={imgEditar.src} />
       </div>
       <div className="right-components">
         {success && <RegistrationAlert text={"Edição feito com sucesso"} />}
@@ -122,12 +122,14 @@ function Edicao() {
           <PasswordInput
             placeholder="Password"
             onPasswordChange={handlePasswordChange}
+            isRegister={true}
           />
           <PasswordInput
             placeholder="Confirm password"
             onPasswordChange={(value) => {
               setConfirmPassword(value);
             }}
+            isRegister={true}
           />
           <LargeButton text="EDITAR" onClick={handleRegisterUser} />
         </div>

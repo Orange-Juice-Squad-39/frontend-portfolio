@@ -3,6 +3,7 @@ import { useState } from "react";
 import eye from "@/assets/images/eye.svg";
 import invisibleEye from "@/assets/images/invisibleEye.svg";
 import "./style.css";
+import { register } from "module";
 
 interface inputProps {
   placeholder: string;
@@ -58,6 +59,10 @@ function PasswordInput({ placeholder, onPasswordChange, isRegister }: inputProps
       setPh("");
     }
 
+    if(isRegister){
+      setShowTooltip(true);
+    }
+
     if (inputValue === "") {
       setBorderColor('rgba(0, 0, 0, 0.23)');
       setLabelColor('rgb(81, 82, 85)');
@@ -69,7 +74,13 @@ function PasswordInput({ placeholder, onPasswordChange, isRegister }: inputProps
       setPh(label);
       setLabel("");
     }
+
+    if(isRegister){
+      setShowTooltip(false);
+    }
   };
+
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <div className="password-input-container" style={{ borderColor }}>
@@ -100,6 +111,13 @@ function PasswordInput({ placeholder, onPasswordChange, isRegister }: inputProps
                 )}
                 {!showPassword && (
                     <img src={invisibleEye.src} className="eye-button"/>
+                )}
+
+                {showTooltip && (
+                  <div className="tooltip">
+                    Mínimo de 8 caracteres, pelo menos uma letra maiúscula, uma letra
+                    minúscula e um número
+                  </div>
                 )}
             </button>
         </div>
