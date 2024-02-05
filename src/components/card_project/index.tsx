@@ -13,8 +13,8 @@ interface cardProjProps {
     name: string;
     data: string;
     portfolio: boolean
-    edit: () => void;
-    exclusion: () => void;
+    edit?: () => void;
+    exclusion?: () => void;
 }
 
 function CardProject({ projImg, perfilImg, name, data, portfolio, edit, exclusion}: cardProjProps) {
