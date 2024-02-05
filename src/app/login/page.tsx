@@ -3,7 +3,7 @@ import GoogleButton from "@/components/google_button";
 import Input from "@/components/input";
 import PasswordInput from "@/components/password_input";
 import LargeButton from "@/components/large_button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import apiConfig from "@/utils/api.config";
 import "./style.css";
@@ -11,6 +11,14 @@ import { useRouter } from "next/navigation";
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
+
+  const googleLogin = async () => {
+    try {
+      window.open(`http://localhost:4444/google/`, "_self");
+    } catch (ex) {
+      console.log(ex)
+    }
+  }
 
   const handleInputChange = (value: string) => {
     setFormData({ ...formData, email: value });
@@ -56,7 +64,7 @@ function Login() {
       </div>
       <div className="right-components">
         <h3 className="login-h3">Entre no Orange Portfólio</h3>
-        <GoogleButton />
+        <GoogleButton onClick={googleLogin}/>
         <div className="login-input">
           <h5 className="login-h5">Faça login com email</h5>
           <Input 

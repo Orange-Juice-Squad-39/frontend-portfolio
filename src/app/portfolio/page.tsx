@@ -88,8 +88,6 @@ function Portfolio() {
           </div>
           <div className="portfolio-projects">
 
-            {/* <ButtonFirstProject onClick={openModal}/> */}
-
             {isModalOpen && (
               <>
                 <div className="overlay" onClick={closeModal}></div>
@@ -121,8 +119,10 @@ function Portfolio() {
                 <SuccessModal text='Projeto deletado' onClick={closeDeleteSucessModal}/>
               </>
             )}
+
+            <ButtonFirstProject onClick={openModal}/>
             
-            <CardProject
+            {/* <CardProject
               projImg={project}
               perfilImg={perfil}
               name="Camila Soares"
@@ -130,21 +130,8 @@ function Portfolio() {
               portfolio={true}
               edit={() => {}}
               exclusion={openDeleteModal}
-            />
-            {/* <CardProject
-              projImg={project}
-              perfilImg={perfil}
-              name="Camila Soares"
-              data="12/23"
-              portfolio={true}
-            />
-            <CardProject
-              projImg={project}
-              perfilImg={perfil}
-              name="Camila Soares"
-              data="12/23"
-              portfolio={true}
             /> */}
+            
           </div>
         </div>
 

@@ -27,6 +27,8 @@ function TagsInput({ label, name, placeholder }: tagsInputProps) {
             setPh(`${placeholder} (aperte enter para adicionar)`);
             setLbl("");
         }
+
+        console.log(tags);
     }, [tags]);
 
     const handleTagInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
