@@ -7,14 +7,32 @@ import postImg from "@/assets/images/Image.png";
 import "./style.css"; 
 
 interface viewPostProps {
+  userImg: string;
+  username: string;
+  data: string;
+  title: string;
+  tags: string[];
+  projImg: string;
+  description: string;
+  link: string;
   closeModal: () => void; 
 }
 
-function ViewPost({ closeModal }: viewPostProps) {
+function ViewPost({ 
+  userImg,
+  username, 
+  data, 
+  title, 
+  tags, 
+  projImg, 
+  description, 
+  link, 
+  closeModal 
+}: viewPostProps) {
   const [avatar, setAvatar] = useState(userImg);
-  const [userName, setUserName] = useState('Camila Soares');
-  const [date, setDate] = useState('12/12');
-  const [downloadLink, setDownloadLink] = useState('https://gumroad.com/products/wxCSL');
+  const [userName, setUserName] = useState(username);
+  const [date, setDate] = useState(data);
+  const [downloadLink, setDownloadLink] = useState(link);
 
   return (
     <div className="view-post-container">
@@ -25,30 +43,33 @@ function ViewPost({ closeModal }: viewPostProps) {
       <div className="post-body-container">
       
         <div className="user-info"> {/* ELEMENTO 01 */}
-          <img src={avatar.src} className="user-img"/>
+          <img src={avatar} className="user-img"/>
           <div className="user-text">
             <text className="user-name subtitle1">{userName}</text>
             <text className="post-date subtitle1">{date}</text>
           </div>
         </div>
 
-        <h5 className="post-title">Ecommerce One Page</h5> {/* ELEMENTO 02 */}
+        <h5 className="post-title">{title}</h5> {/* ELEMENTO 02 */}
 
         <div className="post-tags">  {/* ELEMENTO 03 */}
-          <Tag text="UX"/>
-          <Tag text="Web"/>
+          {tags && tags.length > 0 && (
+            <div className="tags-container">
+              {tags.map((tag, index) => (
+                <Tag key={index} text={tag} />
+              ))}
+            </div>
+          )}
         </div>
 
 
         <div className="post-img-container">  {/* ELEMENTO 04 */}
-          <img src={postImg.src} className="post-img"/>
+          <img src={projImg} className="post-img"/>
         </div>
 
 
         <div className="post-description"> {/* ELEMENTO 05 */}
-          <text className="description-text body1">
-            Temos o prazer de compartilhar com vocês uma variação da nosso primeiro recurso gratuito, Monoceros. É um modelo de uma página para mostrar seus produtos. Tentamos redesenhar uma versão mais B2C e minimalista do nosso primeiro template de e-commerce.
-          </text>
+          <text className="description-text body1">{description}</text>
           <div className="download-container">
             <text className="download-title subtitle1">Download</text>
             <a 

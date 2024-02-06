@@ -8,6 +8,7 @@ import apiConfig from "@/utils/api.config";
 import { useEffect, useState } from "react";
 import formatISO8601ToMMYY from "@/utils/date.utils";
 import { stringToList } from "@/utils/tag.utils";
+import ViewPost from "@/components/modals/view_post";
 
 interface Project {
   urlImageProj: string;
@@ -22,6 +23,17 @@ interface Project {
 
 function Descobrir() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [isViewPostModalOpen, setIsViewPostModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const openViewPostModal = (project: Project) => {
+    setSelectedProject(project);
+    setIsViewPostModalOpen(true);
+  };  
+
+  const closeViewPostModal = () => {
+    setIsViewPostModalOpen(false);
+  };
 
   useEffect(() => {
     const getProjectsByDiscovery = async () => {
@@ -64,19 +76,37 @@ function Descobrir() {
           <div className="descobrir-projects">
             {projects.length > 0 ? (projects.map((project, index) => (
               <CardProject 
-              key={index}
-              projImg={project.urlImageProj} 
-              perfilImg={project.user.urlImageUser} 
-              name={`${project.user.name} ${project.user.lastName}`}
-              data={formatISO8601ToMMYY(project.createdAt)} 
-              tags={stringToList(project.tags)}
-              portfolio={false}
-            />
+                key={index}
+                projImg={project.urlImageProj} 
+                perfilImg={project.user.urlImageUser} 
+                name={`${project.user.name} ${project.user.lastName}`}
+                data={formatISO8601ToMMYY(project.createdAt)} 
+                tags={stringToList(project.tags)}
+                portfolio={false}
+                onClick={() => openViewPostModal(project)}
+              />
             ))
             ): (
               <p>Sem projetos por enquanto :\</p>
             )}
           </div>
+
+          {isViewPostModalOpen && (
+            <>
+              <div className="overlay" onClick={closeViewPostModal}></div>
+              <ViewPost 
+                userImg={selectedProject?.user.urlImageUser || ''}
+                username={`${selectedProject?.user.name} ${selectedProject?.user.lastName}` || ''}
+                data={formatISO8601ToMMYY(selectedProject?.createdAt) || ''}
+                title={selectedProject?.title || ''}
+                tags={stringToList(selectedProject?.tags) || []}
+                projImg={selectedProject?.urlImageProj || ''}
+                description={selectedProject?.description || ''}
+                link={selectedProject?.link || ''}
+                closeModal={closeViewPostModal}
+              />
+            </>
+          )}
           
         </div>
 

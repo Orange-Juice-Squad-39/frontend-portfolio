@@ -18,6 +18,7 @@ function Portfolio() {
   const [isViewPostModalOpen, setIsViewPostModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isDeleteSucessModalOpen, setIsDeleteSucessModalOpen] = useState(false);
+  const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -53,6 +54,22 @@ function Portfolio() {
     setIsDeleteModalOpen(false);
   };
 
+  const openSaveModal = () => {
+    setIsSaveModalOpen(true);
+  };
+
+  const closeSaveModal = () => {
+    setIsSaveModalOpen(false);
+  };
+
+  const saveProject = () => {
+    closeModal()
+
+    //lógica para salvar um projeto
+
+    openSaveModal();
+  }
+
   const exclusionProject = () => {
     closeDeleteModal();
 
@@ -63,7 +80,7 @@ function Portfolio() {
 
   const editProject = () => {
     closeDeleteModal()
-    //lógica para excluir um projeto
+    //lógica para editar um projeto
   }
 
   return (
@@ -93,6 +110,7 @@ function Portfolio() {
                 <div className="overlay" onClick={closeModal}></div>
                 <AddOrEditProject 
                   adding={true} 
+                  onSave={saveProject}
                   onCancel={closeModal} 
                   openViewPost={openViewPostModal}
                 />
@@ -120,13 +138,21 @@ function Portfolio() {
               </>
             )}
 
+            {isSaveModalOpen && (
+              <>
+                <div className="overlay" onClick={closeSaveModal}></div>
+                <SuccessModal text='Projeto adicionado' onClick={closeSaveModal}/>
+              </>
+            )}
+
             <ButtonFirstProject onClick={openModal}/>
             
             {/* <CardProject
-              projImg={project}
-              perfilImg={perfil}
+              projImg={project.src}
+              perfilImg={perfil.src}
               name="Camila Soares"
               data="12/23"
+              tags={['abc', '123']}
               portfolio={true}
               edit={() => {}}
               exclusion={openDeleteModal}
