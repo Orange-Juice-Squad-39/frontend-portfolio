@@ -1,8 +1,10 @@
+
 .delete-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }
 
 .delete-project-container {
