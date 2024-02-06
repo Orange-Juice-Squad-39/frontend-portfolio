@@ -16,6 +16,7 @@ interface cardProjProps {
   portfolio: boolean;
   edit?: () => void;
   exclusion?: () => void;
+  onClick?: () => void;
 }
 
 function CardProject({
@@ -27,6 +28,7 @@ function CardProject({
   portfolio,
   edit,
   exclusion,
+  onClick
 }: cardProjProps) {
   const [projectImg, setProjectImg] = useState(
     projImg !== undefined ? projImg : pjtImg
@@ -40,7 +42,7 @@ function CardProject({
   const [date, setDate] = useState(data !== "" ? data : "12/23");
 
   return (
-    <div className="card-project-container">
+    <div className="card-project-container" onClick={onClick}>
       {portfolio && (
         <div className="menu-button-container">
           <MenuButton edit={edit} exclusion={exclusion} />

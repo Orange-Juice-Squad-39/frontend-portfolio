@@ -14,7 +14,7 @@ function Login() {
 
   const googleLogin = async () => {
     try {
-      window.open(`http://localhost:4444/google/`, "_self");
+      window.open(`http://localhost:4441/google/`, "_self");
     } catch (ex) {
       console.log(ex)
     }

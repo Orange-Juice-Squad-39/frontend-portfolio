@@ -8,11 +8,12 @@ import "./style.css";
 
 interface addEditProps {
     adding?: boolean;
+    onSave: () => void;
     onCancel: () => void;
     openViewPost: () => void;
 }
 
-function AddOrEditProject({ adding, onCancel, openViewPost }: addEditProps) {
+function AddOrEditProject({ adding, onCancel, onSave, openViewPost }: addEditProps) {
     const [label, setLabel] = useState('');
     const [placeholder, setPlaceholder] = useState('Descrição');
     const [inputValue, setInputValue] = useState('');
@@ -106,7 +107,7 @@ function AddOrEditProject({ adding, onCancel, openViewPost }: addEditProps) {
                     </button>
                     
                     <div className="bottom-buttons">
-                        <SmallButton text="SALVAR" disabled={false}/>
+                        <SmallButton text="SALVAR" disabled={false} onClick={onSave}/>
                         <SmallButton text="CANCELAR" disabled={false} onClick={onCancel}/>
                     </div>
 

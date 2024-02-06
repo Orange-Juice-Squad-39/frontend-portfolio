@@ -61,7 +61,7 @@
 
 .user-text {
     display: flex;
-    width: 104px;
+    width: 100%;
     height: 50px;
     flex-direction: column;
     justify-content: center;
