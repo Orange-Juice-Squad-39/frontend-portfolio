@@ -19,14 +19,11 @@ function Portfolio() {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isDeleteSucessModalOpen, setIsDeleteSucessModalOpen] = useState(false);
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isEditSucessModalOpen, setIsEditSucessModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const openViewPostModal = () => {
     setIsViewPostModalOpen(true);
@@ -38,32 +35,33 @@ function Portfolio() {
     openModal();
   };
 
-  const openDeleteSucessModal = () => {
-    setIsDeleteSucessModalOpen(true);
+  const openEditViewPostModal = () => {
+    setIsViewPostModalOpen(true);
+    closeEditModal();
   };
 
-  const closeDeleteSucessModal = () => {
-    setIsDeleteSucessModalOpen(false);
+  const closeEditViewPostModal = () => {
+    setIsViewPostModalOpen(false);
+    openEditModal();
   };
 
-  const openDeleteModal = () => {
-    setIsDeleteModalOpen(true);
-  };
+  const openDeleteSucessModal = () => setIsDeleteSucessModalOpen(true);
+  const closeDeleteSucessModal = () => setIsDeleteSucessModalOpen(false);
 
-  const closeDeleteModal = () => {
-    setIsDeleteModalOpen(false);
-  };
+  const openDeleteModal = () => setIsDeleteModalOpen(true);
+  const closeDeleteModal = () => setIsDeleteModalOpen(false);
 
-  const openSaveModal = () => {
-    setIsSaveModalOpen(true);
-  };
+  const openSaveModal = () => setIsSaveModalOpen(true);
+  const closeSaveModal = () => setIsSaveModalOpen(false);
 
-  const closeSaveModal = () => {
-    setIsSaveModalOpen(false);
-  };
+  const openEditModal = () => setIsEditModalOpen(true);
+  const closeEditModal = () => setIsEditModalOpen(false);
+
+  const openEditSucessModal = () => setIsEditSucessModalOpen(true);
+  const closeEditSucessModal = () => setIsEditSucessModalOpen(false);
 
   const saveProject = () => {
-    closeModal()
+    closeModal();
 
     //lógica para salvar um projeto
 
@@ -79,13 +77,16 @@ function Portfolio() {
   }
 
   const editProject = () => {
-    closeDeleteModal()
+    closeEditModal();
+    
     //lógica para editar um projeto
+
+    openEditSucessModal();
   }
 
   return (
     <div className="portfolio-container">
-      <Header/>
+      <Header />
         <div className="portfolio-content">
           <div className="portfolio-card">
             <CardPerfil/>
@@ -124,6 +125,13 @@ function Portfolio() {
               </>
             )}
 
+            {isViewPostModalOpen && (
+              <>
+                <div className="overlay" onClick={closeEditViewPostModal}></div>
+                <ViewPost closeModal={closeEditViewPostModal}/>
+              </>
+            )}
+
             {isDeleteModalOpen && (
               <>
                 <div className="overlay" onClick={closeDeleteModal}></div>
@@ -145,18 +153,37 @@ function Portfolio() {
               </>
             )}
 
-            <ButtonFirstProject onClick={openModal}/>
+            {isEditSucessModalOpen && (
+              <>
+                <div className="overlay" onClick={closeEditSucessModal}></div>
+                <SuccessModal text='Projeto editado' onClick={closeEditSucessModal}/>
+              </>
+            )}
+
+            {isEditModalOpen && (
+              <>
+                <div className="overlay" onClick={closeEditModal}></div>
+                <AddOrEditProject 
+                  // adding={true} 
+                  onSave={editProject}
+                  onCancel={closeEditModal} 
+                  openViewPost={openEditViewPostModal}
+                />
+              </>
+            )}
+
+            {/* <ButtonFirstProject onClick={openModal}/> */}
             
-            {/* <CardProject
+            <CardProject
               projImg={project.src}
               perfilImg={perfil.src}
               name="Camila Soares"
               data="12/23"
-              tags={['abc', '123']}
+              tags={['Web', 'UX']}
               portfolio={true}
-              edit={() => {}}
+              edit={openEditModal}
               exclusion={openDeleteModal}
-            /> */}
+            />
             
           </div>
         </div>

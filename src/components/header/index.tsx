@@ -25,16 +25,16 @@ const router = useRouter();
         
         <div className="header-right-container">
             <button 
-            className="exit-button-content-desk" 
-            onClick={() => {
-                        localStorage.setItem("logged", "false");
-                        router.refresh();
-                    }}>
+                className="exit-button-content-desk" 
+                onClick={() => {
+                    localStorage.setItem("logged", "false");
+                    router.refresh();
+                }}>
                 <img src={exitIconDesk.src} className="exit-icon-desk"/>
             </button>
-            <button className="header-button">
+            <div>
                 <img src={perfilImg.src} className="header-perfil-img"/>
-            </button>
+            </div>
             <button className="header-button">
                 <img src={notificationIcon.src} className="header-notification-icon"/>
             </button>
