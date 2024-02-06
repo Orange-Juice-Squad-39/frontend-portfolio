@@ -123,8 +123,8 @@ function Portfolio() {
             <ButtonFirstProject onClick={openModal}/>
             
             {/* <CardProject
-              projImg={project}
-              perfilImg={perfil}
+              projImg={project.src}
+              perfilImg={perfil.src}
               name="Camila Soares"
               data="12/23"
               portfolio={true}
